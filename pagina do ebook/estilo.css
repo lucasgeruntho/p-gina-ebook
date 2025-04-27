@@ -2,14 +2,18 @@
     margin: 0;
     padding: 0;
     width: 100%;
+    
     box-sizing: border-box; /* Evita problemas de dimensionamento */
 }
 
 html, body {
     width: 100%;
     margin: 0;
+   
     padding: 0;
     height: 100vh;
+  
+    display: inline-block;
 
 }
 
@@ -23,12 +27,14 @@ html, body {
 
 
     body {
+    position: relative;
     margin: 0;
     padding: 0;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    background-color: #ccc;
+    width: 100%;
 
     .oferta-background {
         background: linear-gradient(90deg, #8b0000, #b22222);
@@ -98,7 +104,93 @@ html, body {
             opacity: 1;
         }
     }
+
+    .img-principal img {
+        height: 200px;
+        
+        width: 100%;
+        display: block;
+        
+        }
+        .img-principal {
+            width: 100%; 
+            overflow-x: auto;     
+            white-space: nowrap;   
+        }
     
+    
+        .img-principal-segunda {
+            width: 100%; 
+            overflow-x: auto;      
+            white-space: nowrap;  
+        }
+        
+        .img-principal-segunda img{
+            height: 420px;         
+            width: 100%;           
+            display: inline-block; 
+        }
+
+        .img-com-text {
+            display: none;
+        }
+        .banner-capa-livros{
+            display: none;
+        }
+
+
+        .primeiro-botao {
+            position: absolute; /* Posição absoluta em relação ao elemento pai com position: relative */
+            top: 103%; /* Distância fixa do topo da tela */
+            left: 53%;
+            transform: translateX(-50%);
+            width: auto;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .primeiro-botao button {
+            color: #f8e7d0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow-x: auto;
+            white-space: nowrap;
+            font-size: 15px;
+            white-space: nowrap;
+
+            padding: 6px 0 10px 0;
+            cursor: pointer;
+            width: 220px;
+            background-color: #3b1a05;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
+        }
+        
+        .primeiro-botao button:hover {
+            background-color: #512411;
+        }
+        
+        .garantia-da-compra {
+            white-space: nowrap;
+            position: absolute;
+            top: 113%; 
+            left: 50%;
+            background-color: #fff;
+            width: 100%;
+            transform: translateX(-50%);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .garantia-da-compra img {
+          width: 400px;
+          min-width: 300px;
+          height: auto;
+        }
+        
+
+
 
     }
 
@@ -106,90 +198,285 @@ html, body {
 
   /* CELULAR MOVEL */
 
-@media screen and  (max-width: 768px) {
 
-body {     
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-   
-    .oferta-background {
+    @media screen and  (max-width: 768px) {
+        * { 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+             
+        html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+    .oferta-background-2 {
         background: linear-gradient(90deg, #8b0000, #b22222);
         height: 55px;
         margin: 0;
-        padding: 0;
+        padding: 0 10px;
         display: flex;
         justify-content: center; /* Centraliza a caixa em relação ao background */
         align-items: center;
-    }
-    
-    .oferta-container {
+}
+            
+    .oferta-container-2 {
         display: flex;
+        margin-left: -10px;
+        padding: 0 10px;
         justify-content: center; /* Centraliza os itens dentro do container */
         align-items: center;
         width: 100%; /* Preenche a largura disponível */
-        max-width: 112px; /* Limita o tamanho máximo para evitar que se estique demais em telas grandes */
-    }
-    
-    .oferta-tempo {
+        max-width: 120px; /* Limita o tamanho máximo para evitar que se estique demais em telas grandes */
+}
+            
+    .oferta-tempo-2 {
         font-family: 'Segoe UI', Roboto, sans-serif;
         font-weight: bold;
         color: #fff;
-        font-size: 16px;
+        font-size: 12px;
+        
         white-space: nowrap;
         flex-shrink: 0; /* Evita que o texto encolha */
-    }
-    
-    .test {
+}
+            
+    .test-2 {
         font-weight: 700;
         white-space: nowrap;
         font-family: Arial, Helvetica, sans-serif;
-        width: 133px;
+        width: 90px;
         height: 33px;
         animation: pulse 1.2s infinite;
         border-radius: 4px;
         background: rgba(0, 0, 0, .2);
         color: gold;
-        font-size: 22px;
+        margin-left: -20px;
+        font-size: 19px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-shrink: 0; /* Evita que o texto encolha */
-    }
-    
-    .hoje {
+}
+            
+    .hoje-2 {
         font-family: 'Segoe UI', Roboto, sans-serif;
-        font-size: 18px;
+        font-size: 12px;
         color: #fff;
         font-weight: bold;
         white-space: nowrap;
-        margin-left: 12px;
+        margin-left: 5px;
         flex-shrink: 0; /* Evita que o texto encolha */
-    }
-    
+}
+               
+               
     @keyframes pulse {
         0% {
-            transform: scale(1);
-            opacity: 1;
-        }
+        transform: scale(1);
+        opacity: 1;
+    }
         50% {
-            transform: scale(1.1);
-            opacity: 0.7;
-        }
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
         100% {
             transform: scale(1);
             opacity: 1;
-        }
+    }
+    }
+    .img-principal img {
+        height: 140px;
+        opacity: 1 !important;
+        width: 100%;
+        display: block;
+                   
+}
+           
+    .img-principal-segunda {
+                       
+    display: none;
+}
+           
+                  
+    .img-com-text {
+        display: block;
+               
+}
+           
+    .banner-capa-livros{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        opacity: 1;
+        margin-top: -18px;
+}
+           
+           
+    .banner-capa-livros img {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-width: 100%;
+}
+           
+       
+    .oferta-background {
+    display: none;
+         
+}
+.primeiro-botao {
+    display: none;
+}
+    .garantia-da-compra {
+    display: none;
+}
+       
+    .banner-capa-livros, .primeiro-botao-1 {
+        display: flex;
+}
+       
+.primeiro-botao-mobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    .primeiro-botao-mobile-2 {
+        margin-top: -65px;
+        width: auto; /* Não estica */
+    }
+        
+.primeiro-botao-mobile-2 a button {
+    color: #f8e7d0;
+    width: 250px; /* largura fixa do botão */
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #3b1a05;
+    border: none;
+    border-radius: 5px;
+    }
+        
+    .garantia-da-compra-primary {
+        display: flex;
+        width: 100%;
+        
+    }
+    .garantia-da-compra-primary img {
+        width: 90%;
+        margin-left: 10px;
     }
     
-    
+    .img-confira {
+    display: block;
+    width: 100%;
+    margin: 0;
+    }
+       
+    .text-primary-sobre-ebook {
+    display: flex;
+    width: 0;
+    height: 0 auto;
+    margin: 0;
+    padding: 0;
+               
+    }.text-sobre-ebook {
+    margin: 0;
+    margin-left: 120px;
+    margin-top: 10px;
+             
+    }.text-sobre-ebook h3 {
+    color: #793928;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    white-space: nowrap;
+    }
+       
+    .description-production {
+    display: flex;
+    width: 0;
+    height: 0;
+    margin-top: -10px;
+    border-radius: 5px;
+    margin-left: 15px;
 }
+    .description-sobre-ebook {
+    margin-top: 30px;
+    margin-left: 10px;
+    }
+       
+       
+    .description-sobre-ebook h4 {
+    font-size: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    white-space: nowrap;
+    }
+            
+    #description-sobre-ebook-second-text {
+    margin-left:20px;
+    color: #793928;
+    } #primary-text-description{
+    margin-left: 28px;
+    width: 0;
+    }
+    #third-description-ebook {
+    margin-left: -2px;
+    width: 0;
+    margin: 0;
+    height: 0;
+    }
+    #fourth-description-ebook {
+    margin-left: -5px;
+    width: 0;
+    margin: 0;
+    height: 0;
+    }#fifth-description-ebook {
+    width: 0;
+    margin: 0;
+    height: 0;
+    margin-left: 15px; 
+    }#friday-description-ebook {
+    width: 0;
+    margin: 0;
+    height: 0;
+    margin-left: 22px;
+    }#seventh-description-ebook {
+    width: 0;
+    margin: 0;
+    height: 0;
+    margin-left: 8px;
+    }
+       
+           
+       /* subtext*/
+       
+    .text-description {
+        margin-top: 30px;
+}
+    .text-description span{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+        white-space: nowrap;
+}
+       
+    #primary-subtext-description {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       
+    } #second-subtext-description {
+        margin-left: 10px;
+    } #third-subtext-description {
+        margin-left: 17px;
+    } #fourth-subtext-description {
+        margin-left: 48px;
+    }#fifth-subtext-description {
+        margin-left: 82px;
+    }
+       
+}
+}
+        
 
-}
-    
 /* CELULAR MOVEL FECHAMENTO */
 
 
@@ -269,14 +556,115 @@ body {
 
 
 .img-principal img {
-height: 500px;
+    height: 420px;
+    
+    width: 100%;
+    display: block;
+    
+    }
+    .img-principal {
+        width: 100%; 
+        
+        overflow-x: auto;     
+        white-space: nowrap;   
+    }
 
-width: 100%;
-display: block;
 
-}
+    .img-principal-segunda {
+        width: 100%; 
+        overflow-x: auto;      
+        white-space: nowrap;   
+    }
+    
+    .img-principal-segunda img{
+        height: 580px;        
+        width: 100%;          
+        
+    }
 
 
+    .primeiro-botao {
+        display: flex;
+       
+        margin: 0;
+        padding: 0;
+        width: 0;
+        position: absolute;
+        margin-left: 40%;
+        margin-top: -77px;
+        height: 0;
+       
+        white-space: nowrap;
+    }
+    .primeiro-botao button{
+        color: #f8e7d0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        overflow-x: auto;
+        border: none;
+        font-size: 20px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+        cursor: pointer;
+        width: 290px;
+        background-color: #3b1a05;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: background-color 0.3s ease; /* Transição suave */
+    }
+    .primeiro-botao button:hover {
+        background-color: #512411; /* tom mais claro que #3b1a05 */
+    }
+
+    .garantia-da-compra {
+        position: absolute;
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        background-color: #fff;
+    }
+    
+    .garantia-da-compra img {
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 24%;
+        margin-left: 38%;
+        height: auto;
+    }
+
+
+
+
+
+
+
+
+     /* ocultar a img no desktop */
+
+     .img-confira {
+        display: none;
+     }
+
+     .garantia-da-compra-1 {
+        display: none;
+     }
+     .primeiro-botao-1 {
+        display: none;
+     }
+
+
+    .img-com-text {
+        display: none;
+    }
+
+    .banner-capa-livros{
+        display: none;
+    }
+
+     /* ocultar a img no desktop */
+
+
+ /* pop-up da página */
 #popup-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -342,3 +730,5 @@ display: block;
     display: none;
     padding: 20px;
   }
+
+   /* fechamento*/
