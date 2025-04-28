@@ -211,79 +211,61 @@ html, body {
         margin: 0;
         padding: 0;
 
-    .oferta-background-2 {
-        background: linear-gradient(90deg, #8b0000, #b22222);
-        height: 55px;
-        margin: 0;
-        padding: 0 10px;
-        display: flex;
-        justify-content: center; /* Centraliza a caixa em relação ao background */
-        align-items: center;
-}
-            
-    .oferta-container-2 {
-        display: flex;
-        margin-left: -10px;
-        padding: 0 10px;
-        justify-content: center; /* Centraliza os itens dentro do container */
-        align-items: center;
-        width: 100%; /* Preenche a largura disponível */
-        max-width: 120px; /* Limita o tamanho máximo para evitar que se estique demais em telas grandes */
-}
-            
-    .oferta-tempo-2 {
-        font-family: 'Segoe UI', Roboto, sans-serif;
-        font-weight: bold;
-        color: #fff;
-        font-size: 12px;
-        
-        white-space: nowrap;
-        flex-shrink: 0; /* Evita que o texto encolha */
-}
-            
-    .test-2 {
-        font-weight: 700;
-        white-space: nowrap;
-        font-family: Arial, Helvetica, sans-serif;
-        width: 90px;
-        height: 33px;
-        animation: pulse 1.2s infinite;
-        border-radius: 4px;
-        background: rgba(0, 0, 0, .2);
-        color: gold;
-        margin-left: -20px;
-        font-size: 19px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0; /* Evita que o texto encolha */
-}
-            
-    .hoje-2 {
-        font-family: 'Segoe UI', Roboto, sans-serif;
-        font-size: 12px;
-        color: #fff;
-        font-weight: bold;
-        white-space: nowrap;
-        margin-left: 5px;
-        flex-shrink: 0; /* Evita que o texto encolha */
-}
-               
-               
-    @keyframes pulse {
-        0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-        50% {
-        transform: scale(1.1);
-        opacity: 0.7;
-    }
-        100% {
-            transform: scale(1);
-            opacity: 1;
-    }
-    }
+        .container-oferta-mobile {
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            background: #8B0000;
+            display: flex;
+            justify-content: center;
+          }
+          
+          .banner {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; 
+            margin-left: -85px;
+            padding: 10px 10px;
+            max-width: 200px; 
+            box-sizing: border-box;
+          }
+          
+          .banner span {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            white-space: nowrap;
+            margin-right: 10px; /* Espaçamento entre "Aproveite" e "20% OFF" */
+          }
+          
+          .off {
+            background: #660000;
+            color: gold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            animation: pulse 2s infinite;
+            font-size: 18px;
+            box-sizing: border-box; /* Garante que o padding não afete o tamanho do elemento */
+            display: inline-block; /* Faz com que os itens fiquem lado a lado */
+            width: 120px; /* Tamanho fixo da .off */
+            white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+          }
+
+          @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); } /* Um aumento sutil */
+            100% { transform: scale(1); }
+          }
+          
+          
+          
+          
+          
+          
+          
+          
+
     .img-principal img {
         height: 140px;
         opacity: 1 !important;
@@ -339,6 +321,7 @@ html, body {
         display: flex;
         width: 100%;
         justify-content: center;
+        padding: 0 10px;
         align-items: center;
     }
         
@@ -375,17 +358,17 @@ html, body {
        
     .text-primary-sobre-ebook {
     display: flex;
-    width: 0;
-    height: 0 auto;
-    margin: 0;
-    padding: 0;
-               
-    }.text-sobre-ebook {
-    margin: 0;
-    margin-left: 120px;
-    margin-top: 10px;
+     padding: 0 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b1a05;
+    
+}.text-sobre-ebook {
+    width: auto;
+   padding: 0 10px 3px ;
              
-    }.text-sobre-ebook h3 {
+}.text-sobre-ebook h3 {
     color: #793928;
     font-size: 25px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -394,34 +377,31 @@ html, body {
        
     .description-production {
     display: flex;
-    width: 0;
-    height: 0;
-    margin-top: -10px;
-    border-radius: 5px;
-    margin-left: 15px;
+    padding: 0 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
     .description-sobre-ebook {
-    margin-top: 30px;
-    margin-left: 10px;
+        margin-top: 30px;
+        margin-left: -20px;
+        text-align: center; /* Centraliza o texto dentro da div */
     }
-       
-       
-    .description-sobre-ebook h4 {
-    font-size: 24px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black;
-    white-space: nowrap;
-    }
-            
+          
     #description-sobre-ebook-second-text {
-    margin-left:20px;
+    margin-left:30px;
+    font-size: 23px;
+    white-space: nowrap;
     color: #793928;
     } #primary-text-description{
     margin-left: 28px;
+    font-size: 23px;
+    white-space: nowrap;
     width: 0;
     }
     #third-description-ebook {
-    margin-left: -2px;
+   white-space: nowrap;
+    font-size: 23px;
     width: 0;
     margin: 0;
     height: 0;
