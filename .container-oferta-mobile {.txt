@@ -1,0 +1,47 @@
+.container-oferta-mobile {
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            background: #8B0000;
+            display: flex;
+            justify-content: center;
+          }
+          
+          .banner {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; 
+            margin-left: -75px;
+            padding: 10px 10px;
+            max-width: 200px; 
+            box-sizing: border-box;
+          }
+          
+          .banner span {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            white-space: nowrap;
+            margin-right: 10px; /* Espaçamento entre "Aproveite" e "20% OFF" */
+          }
+          
+          .off {
+            background: #660000;
+            color: gold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            animation: pulse 2s infinite;
+            font-size: 18px;
+            box-sizing: border-box; /* Garante que o padding não afete o tamanho do elemento */
+            display: inline-block; /* Faz com que os itens fiquem lado a lado */
+            width: 120px; /* Tamanho fixo da .off */
+            white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+          }
+
+          @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); } /* Um aumento sutil */
+            100% { transform: scale(1); }
+    }
+          
