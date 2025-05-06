@@ -270,11 +270,7 @@ html, body {
                    
 }
            
-    .img-principal-segunda {
-                       
-    display: none;
-}
-           
+        
                   
     .img-com-text {
         display: block;
@@ -284,6 +280,8 @@ html, body {
     .banner-capa-livros{
         width: 100%;
         overflow: hidden;
+        justify-content: center;
+        align-items: center;
         display: flex;
         opacity: 1;
         margin-top: -18px;
@@ -297,59 +295,30 @@ html, body {
         max-width: 100%;
 }
            
-       
-    .oferta-background {
-    display: none;
-         
-}
-.primeiro-botao {
-    display: none;
-}
-    .garantia-da-compra {
+.img-principal-segunda,
+.oferta-background,
+.primeiro-botao,
+.garantia-da-compra {
+                       
     display: none;
 }
-       
-    .banner-capa-livros, .primeiro-botao-1 {
-        display: flex;
-}
-       
-.primeiro-botao-mobile {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        padding: 0 10px;
-        align-items: center;
-    }
-        
-    .primeiro-botao-mobile-2 {
-        margin-top: -65px;
-        width: auto; 
-    }
-        
-.primeiro-botao-mobile-2 a button {
-    color: #f8e7d0;
-    width: 250px; 
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #3b1a05;
-    border: none;
-    border-radius: 5px;
-    }
-        
-    .garantia-da-compra-primary {
-        display: flex;
-        width: 100%;
-        
-    }
-    .garantia-da-compra-primary img {
-        width: 90%;
-        margin-left: 10px;
-    }
+             
     
+.health-tips {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+
     .img-confira {
     display: block;
     width: 100%;
     margin: 0;
+    padding: 0;
     }
        
     .text-primary-sobre-ebook {
@@ -457,41 +426,537 @@ html, body {
 }
 .summary-ebook {
     width: 100%;
-    background-color: #ccc;
+   
     padding: 10px;
     display: flex;
     margin-top: 20px;
     flex-direction: column;
-    align-items: center;         /* centraliza os blocos horizontalmente */
+    align-items: center; /* centraliza os blocos horizontalmente */
     justify-content: center;
+    gap: 10px; /* espaçamento entre os blocos */
 }
 
 .summary-1,
-.summary-2 {
-    width: 0;
+.summary-2,
+.summary-3,
+.summary-4 {
+    margin-left: 20px;
     display: flex;
-    margin-left: -170px;
     align-items: center;
-    justify-content: center;
-    gap: 10px;                 
-    margin-bottom: 20px;
-    width: fit-content;         
+    justify-content: flex-start; 
+    gap: 10px;
+    width: 100%; 
+    max-width: 400px; 
+    box-sizing: border-box;
 }
+
 .summary-1 span,
-.summary-2 span {
+.summary-2 span,
+.summary-3 span,
+.summary-4 span {
     font-size: 16px;
     color: black;
-    font-family: system-ui, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    word-wrap: break-word; 
+    flex-shrink: 1; 
 }
+
+/* Ícones */
 .summary-1 svg,
-.summary-2 svg {
-    width: 24px;
-    height: 24px;
+.summary-2 svg,
+.summary-3 svg,
+.summary-4 svg {
+    width: 20px;
+    height: 20px;
     color: #BCD454;
+    flex-shrink: 0; 
 }
 
 
+.primary-button {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+  }
+  
+  .button-primary {
+    min-width: 250px;
+    max-width: 220px;
+  }
+  
+  .button-primary .custom-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+   
+    background-color: #3b1a05;
+    color: #f8e7d0;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+  .button-primary span {
+    margin-top: -3px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 0;
+    white-space: nowrap;
+  }
+  .button-primary .custom-button .icon-car {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .garantia-da-compra-primary {
+    display: flex;
+    margin-top: 3px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+    
+}
+.garantia-primary {
+    max-width: 200px;
+    min-width: 200px;
+}
+.garantia-da-compra-primary img {
+    width: 100%;
+}
 
+.benefits-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #3b1d0d;
+    padding: 8px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 6px;
+    text-align: center;
+  }
+  
+  .icon-1 {
+    background-color: #2a1409;
+    border: 1px solid #854c1c;
+    border-radius: 4px;
+    padding: 6px 2px; /* 6px top/bottom, 2px left/right */
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: rgb(151, 104, 68);
+  }
+  
+  .icon-1 i {
+    font-size: 16px;
+  }
+  
+  .text {
+    font-weight: bold;
+    font-size: 12px;
+    color: #ffffff;
+  }
+  
+  .divider {
+    width: 1px;
+    background-color: #aa6b39;
+    margin: 0 4px;
+  }
+  
+
+  .img-topics {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-topics img {
+    margin: 0;
+    padding: 0;
+    display: block; 
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+
+
+  .centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .bloco {
+    max-width: 600px;
+    text-align: left;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #fdf6f2;
+    color: #3d2b1f;
+    line-height: 1.6;
+  }
+
+  .bloco h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  .bloco h1 strong {
+    font-weight: bold;
+    color: #5a2c0f;
+  }
+
+  .subtitulo {
+    color: #777;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+
+  .itens-description {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .icon-description {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+
+  .item-texto {
+    max-width: 600px;
+  }
+
+  .item-texto strong {
+    color: #5a2c0f;
+  }
+
+  .brigadeiro-imagem {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+    margin-top: 40px;
+  }
+  
+
+
+  .previa-receber {
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  .previa-receber img {
+    display: block;
+    margin: 0;
+    height: 65px;
+    padding: 0;
+    border: 0;
+    
+  }
+
+  .ebook-open {
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  } .ebook-open img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+  }
+
+
+  
+  #revenues-second,
+  #revenues-second,
+  #revenues-third,
+  #revenues-fourth,
+  #revenues-fifth {
+    white-space: nowrap;
+
+  }
+
+  #revenues-fifth {
+    background-color: #3c1b08;
+    border-radius: 10px; 
+    padding: 5px 10px 8px;
+  }
+  .choco-receitas-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #5c2e0d; 
+ 
+    box-sizing: border-box;
+  }
+
+  .choco-receitas {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    font-size: 1.5rem;
+    color: #fbeec1;
+    padding: 2rem;
+    border-radius: 1rem;
+    line-height: 1.6;
+   
+  }
+
+
+  .capitulos-container {
+    display: flex;
+    background-image: url(fotos_ebook_capa_e_etc/Banner\ fundo\ receitas.jpg);
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-size: auto;
+    background-position: center ; 
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    
+  }
+  
+  .capitulo-card {
+    width: 300px;
+    margin-top: 40px;
+    background-color: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .capitulo-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .capitulo-card .texto {
+    background-color: #5a2c0f;
+    padding: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f8e7d0;
+    text-align: center;
+  }
+
+
+
+  .bloco-beneficios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .beneficio {
+    background: #FFFAEB;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 90%;
+  }
+  
+  .beneficio p {
+    margin: 0;
+    font-size: 15px;
+    color: #1A1A1A;
+  }
+  
+  .icone-beneficios {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+
+
+  .chocolate-benefit {
+    margin: 0;
+    width: 100%;
+   padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f5deb3;
+    background-color: #5c2e0d;
+    padding: 20px 40px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+
+  .img-beneficios-de-consumir-chocolate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .img-beneficios-de-consumir-chocolate img {
+    display: block; 
+    max-width: 100%;
+    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none;
+  }
+  
+  .oferta-box {
+    max-width: 400px;
+    width: 90%;
+    margin: 40px auto;
+    background: #fff8dc;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .oferta-topo {
+    background-color: #dd7700;
+    color: white;
+    padding: 20px 15px;
+  }
+  
+  .oferta-topo-titulo {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .oferta-topo-subtitulo {
+    font-size: 0.95em;
+    margin: 5px 0 0;
+  }
+  
+  .oferta-conteudo {
+    padding: 25px 20px;
+  }
+  
+  .preco-antigo {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  .preco-novo {
+    margin-top: 10px;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #793200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .avista {
+    font-size: 0.6em;
+    background: #fff2cd;
+    color: #793200;
+    border-radius: 12px;
+    padding: 5px 10px;
+  }
+  
+  .parcelado {
+    font-size: 0.9em;
+    margin: 10px 0 0;
+  }
+  
+  .botao-compra {
+    background-color: #dd7700;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .texto-seguro {
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: #666;
+  }
+  
+  .botoes-pagamento {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .botao-cartao,
+  .botao-pix {
+    padding: 10px 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .botao-cartao {
+    border: 1px solid #ccc;
+    background: white;
+  }
+  
+  .botao-pix {
+    border: 2px solid #dd7700;
+    color: #dd7700;
+    background: #fff8dc;
+    font-weight: bold;
+  }
+  
+  
  
 }
 }
@@ -652,10 +1117,7 @@ html, body {
         height: auto;
     }
 
-
-
-
-
+    
 
 
 
