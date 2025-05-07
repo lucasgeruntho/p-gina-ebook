@@ -734,52 +734,114 @@ html, body {
   }
 
 
-  .capitulos-container {
-    display: flex;
-    background-image: url(fotos_ebook_capa_e_etc/Banner\ fundo\ receitas.jpg);
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background-size: auto;
-    background-position: center ; 
-    background-repeat: no-repeat;
-    padding-bottom: 50px;
-    
-  }
-  
-  .capitulo-card {
-    width: 300px;
-    margin-top: 40px;
-    background-color: transparent;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  }
-  
-  .capitulo-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .capitulo-card .texto {
-    background-color: #5a2c0f;
-    padding: 12px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: #f8e7d0;
-    text-align: center;
-  }
+#receitas-text-1 {
+  white-space: nowrap;
+}
 
+
+  
+.receitas-modulo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-image: url(fotos_ebook_capa_e_etc/Banner\ fundo\ receitas.jpg);
+  box-sizing: border-box;
+}
+
+
+.receita-card {
+  width: 100%;
+  max-width: 330px;
+  background-color: transparent;
+  border-radius: 16px;
+ 
+  font-family: Arial, sans-serif;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+.receita-card .receita-img {
+  width: 100%;
+  height: 160px; 
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+
+.receita-card .receita-toggle {
+  position: relative;
+  background-color: #5c2c06;
+  color: #fff;
+  padding: 14px 50px 14px 18px; /* espaço para a seta */
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+.receita-card .receita-toggle span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.receita-card .receita-toggle:hover {
+  background-color: #3b1d0d;
+ 
+}
+
+
+/* Ícone de seta */
+.receita-card .receita-icon {
+  position: absolute;
+  left: 110px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  color: #fff;
+  
+}
+
+/* Rotação da seta quando ativo */
+.receita-card.ativo .receita-icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Conteúdo interno */
+.receita-card .receita-conteudo {
+  display: none;
+  background-color: #fff8ec;
+  color: #3a1f0d;
+  padding: 16px;
+  border-radius: 0 0 12px 12px;
+  font-size: 15px;
+
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+  
+  
 
 
   .bloco-beneficios {
     display: flex;
     flex-direction: column;
     align-items: center;
- 
+ margin-top: 20px;
     padding: 16px;
     box-sizing: border-box;
     font-family: sans-serif;
@@ -848,8 +910,10 @@ html, body {
   .oferta-box {
     max-width: 400px;
     width: 90%;
+    justify-content: center;
+    align-items: center;
     margin: 40px auto;
-    background: #fff8dc;
+    background: #fff8dce1;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     font-family: Arial, sans-serif;
@@ -858,7 +922,7 @@ html, body {
   }
   
   .oferta-topo {
-    background-color: #dd7700;
+    background-color: #793928;
     color: white;
     padding: 20px 15px;
   }
@@ -897,6 +961,7 @@ html, body {
   }
   
   .avista {
+    
     font-size: 0.6em;
     background: #fff2cd;
     color: #793200;
@@ -933,6 +998,7 @@ html, body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    
   }
   
   .botao-cartao,
@@ -940,6 +1006,7 @@ html, body {
     padding: 10px 18px;
     border-radius: 10px;
     display: flex;
+    
     align-items: center;
     justify-content: center;
   }
@@ -947,7 +1014,15 @@ html, body {
   .botao-cartao {
     border: 1px solid #ccc;
     background: white;
+    display: flex;
+    align-items: center;
+    border: 2px solid #dd7700;
+
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 10px;
   }
+  
   
   .botao-pix {
     border: 2px solid #dd7700;
@@ -956,8 +1031,315 @@ html, body {
     font-weight: bold;
   }
   
+
+  .vitalicio-bloco {
+    max-width: 100%;
+   
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2b1b0d;
+    border-radius: 16px;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
   
- 
+  .vitalicio-selo img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .vitalicio-selo h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  
+  .vitalicio-selo h2 span {
+    color: #ff6600;
+    font-weight: bold;
+  }
+  
+  .vitalicio-selo p {
+    font-size: 0.95rem;
+    color: #e5c84d;
+    margin-bottom: 20px;
+  }
+  
+  .vitalicio-beneficios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .vitalicio-beneficios .item-vitalicio {
+    width: 100%;
+    max-width: 280px;
+    min-width: 280px;
+    background-color: #442c18;
+    border-radius: 12px;
+  
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .vitalicio-beneficios .item-vitalicio img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  
+  
+  .icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+  }
+  
+  .icon-check {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    margin-left: -200px;
+    flex-shrink: 0;
+  }
+  
+  .texto-legenda {
+    font-size: 0.9rem;
+    font-weight: bold;
+   
+   white-space: nowrap;
+    color: #fff;
+    width: 0;
+  }
+  
+  
+  .vitalicio-frases {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .frase-bloco {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .svg-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  
+  .svg-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .frase-texto {
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+  
+  .frase-texto strong {
+    color: #FFD700;
+    display: inline;
+  }
+
+
+
+  #quanto-vale-container {
+    position: relative;
+   justify-content: center;
+   align-items: center;
+    max-width: 100%;
+    background: #fffaf5;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    z-index: 1; /* Pode ajustar se necessário */
+    color: #3e1e00;
+    border-radius: 12px;
+  }
+  
+  #quanto-vale-container h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  #quanto-vale-container .light {
+    font-weight: 300;
+    color: #a5764f;
+  }
+  
+  #quanto-vale-container p {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #5c4c3c;
+  }
+  
+  #quanto-vale-container .highlight {
+    color: #5c2e00;
+  }
+  
+.quanto-vale-description h2{
+  font-size: 1.8em;
+}
+
+
+
+.chocolate-aliado-saude {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* margem lateral interna */
+  box-sizing: border-box;
+}
+
+.chocolate-aliado-saude img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+.grid-img {
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
+  border: 2px solid #ccc; 
+  border-radius: 8px; 
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.passos-compra {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: sans-serif;
+  z-index: 1;
+}
+
+.titulo-passos {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.passo {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 24px;
+  text-align: center;
+}
+
+.passo .icone {
+  font-size: 32px;
+  color: #e66c00;
+  margin-bottom: 12px;
+}
+
+.passo h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 12px;
+}
+
+.passo p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+
+
+.garantia-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 90%;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+  position: relative;
+}
+
+.garantia-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.garantia-texto-opcional h2 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.garantia-texto-opcional .vermelho {
+  color: #ff5c5c;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.garantia-texto-opcional p {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.garantia-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.garantia-itens .item-garantia-finalizar-compra {
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+
+
+
+
+
+
+
+
 }
 }
         

@@ -59,3 +59,16 @@ document.getElementById("lead-form").addEventListener("submit", function (e) {
       console.error(err);
     });
 });
+
+
+
+  function toggleConteudo(el) {
+    const card = el.closest('.receita-card');
+    const conteudo = card.querySelector('.receita-conteudo');
+    const isOpen = conteudo.style.display === 'block';
+
+    conteudo.style.display = isOpen ? 'none' : 'block';
+    card.classList.toggle('ativo', !isOpen);
+  }
+
+

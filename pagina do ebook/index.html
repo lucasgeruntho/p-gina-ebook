@@ -173,17 +173,17 @@
 </div>
 
 <div class="benefits-container">
-  <div class="benefit-item">
+  <div class="benefit-item-garantia-finalizar-compra-vitalicio">
     <div class="icon-1"><i class="fas fa-globe"></i></div>
     <div class="text">100% ONLINE</div>
   </div>
   <div class="divider"></div>
-  <div class="benefit-item">
+  <div class="benefit-item-garantia-finalizar-compra-vitalicio">
     <div class="icon-1"><i class="fas fa-check-circle"></i></div>
     <div class="text">ACESSO IMEDIATO</div>
   </div>
   <div class="divider"></div>
-  <div class="benefit-item">
+  <div class="benefit-item-garantia-finalizar-compra-vitalicio">
     <div class="icon-1"><i class="fas fa-file-alt"></i></div>
     <div class="text">LIVRO EM PDF</div>
   </div>
@@ -211,7 +211,7 @@
                 fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
-      <div class="item-texto">
+      <div class="item-garantia-finalizar-compra-vitalicio-texto">
         <strong>Modo de Preparo Descomplicado:</strong> Receitas prontas em minutos, sem bagunça!
       </div>
     </div>
@@ -225,7 +225,7 @@
                 fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
-      <div class="item-texto">
+      <div class="item-garantia-finalizar-compra-vitalicio-texto">
         <strong>Utensílios Simples:</strong> Não precisa de equipamentos caros, cozinha real, para vida real!
       </div>
     </div>
@@ -239,7 +239,7 @@
                 fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
-      <div class="item-texto">
+      <div class="item-garantia-finalizar-compra-vitalicio-texto">
         <strong>Ingredientes:</strong> Você precisará de poucos e são de fácil acesso!
       </div>
     </div>
@@ -270,51 +270,266 @@
 </div>
 
 
-<div class="capitulos-container">
-  <div class="capitulo-card">
-    <img src="fotos_ebook_capa_e_etc/mousse e cremes.jpg" alt="Mousses e Cremes">
-    <div class="texto">1. Mousses e Cremes</div>
+<div class="receitas-modulo-container">
+
+  <div class="receita-card">
+    <img class="receita-img" src="fotos_ebook_capa_e_etc/mousse e cremes.jpg" alt="Mousses e Cremes">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span id="receitas-text-1">1. Mousses e Cremes</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+        <p> • Mousse de Chocolate Trufado
+        <br>• Mousse de Chocolate com Amêndoas
+        <br>• Mousse de Chocolate com Coco
+        <br>• Mousse de Chocolate com Leite Ninho
+        <br>• Mousse de Chocolate com Doce de Leite
+        <br>• Creme de Chocolate com Morango
+        <br>• Creme de Chocolate com Avelã
+        <br>• Creme de Chocolate com Paçoca
+        <br>• Creme de Chocolate com Nutella
+        </p>
+    </div>
   </div>
-  <div class="capitulo-card">
-    <img src="fotos_ebook_capa_e_etc/tortas e bolos.jpg" alt="Tortas e Bolos">
-    <div class="texto">2. Tortas e Bolos</div>
+
+  <div class="receita-card">
+    <img class="receita-img" src="fotos_ebook_capa_e_etc/tortas e bolos.jpg" alt="Tortas e Bolos">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span>2. Tortas e Bolos</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+      <p>
+        <br>• Bolo de Chocolate e Nozes
+        <br>• Bolo de Chocolate com cobertura de trufado
+        <br>• Bolo de Chocolate com Avelã
+        <br>• Bolo de Chocolate com Morango
+        <br>• Bolo de Chocolate Trufado com Coco
+        <br>• Bolo de Chocolate com Creme de Ovomaltine
+        <br>• Torta de Chocolate com Amendoim
+        <br>• Torta de Chocolate e Oreo
+        <br>• Torta de Chocolate e Nutella
+        <br>• Torta de Chocolate com Creme de Avelã
+
+      </p>
+    </div>
   </div>
-  <div class="capitulo-card">
-    <img src="fotos_ebook_capa_e_etc/milkshake e sorvete.jpg" alt="Sorvetes e Milkshake">
-    <div class="texto">3. Sorvetes e Milkshake</div>
+
+  <div class="receita-card">
+    <img class="receita-img" src="fotos_ebook_capa_e_etc/milkshake e sorvete.jpg" alt="Sorvetes e Milkshake">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span>3. Sorvetes e Milkshake</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+      <p>
+        <br>• Sorvete de Chocolate Trufado
+        <br>• Sorvete de Chocolate com Coco Ralado 
+        <br>• Sorvete de Chocolate com Nutella
+        <br>• Sorvete de Chocolate com creme de Avelã
+        <br>• Sorvete de Chocolate com cobertura de oreo
+        <br>• Sorvete de Chocolate com Crocante de Ovomaltine
+        <br>• Sorvete de Chocolate com Pedaços de Ferrero Rocher
+        <br>• Milkshake de Chocolate com cobertura de creme de Avelã
+        <br>• Milkshake de chocolate com cobertura de Nutella
+        <br>• Milkshake de chocolate com cobertura de oreo e Nutella    
+
+
+
+      </p>
+    </div>
   </div>
-  <div class="capitulo-card">
-    <img src="fotos_ebook_capa_e_etc/brownie e cookies.jpg" alt="Brownies e Cookies">
-    <div class="texto">4. Brownies e Cookies</div>
+
+  <div class="receita-card">
+    <img class="receita-img" src="fotos_ebook_capa_e_etc/brownie e cookies.jpg" alt="Brownies e Cookies">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span>4. Brownies e Cookies</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+      <p>
+        <br>• Brownie de Chocolate 
+        <br>• Brownie de Nutella com nozes 
+        <br>• Brownie de Chocolate com creme de Avelã
+        <br>• Brownie de Chocolate com Oreo
+        <br>• Brownie Trufado com Ganache de Chocolate
+        <br>• Cookies de Chocolate
+        <br>• Cookies de Chocolate com Amendoim
+        <br>• Cookies de Chocolate Trufado
+        <br>• Cookies de Chocolate com Ovomaltine 
+        <br>• Cookies de Chocolate Recheados com Beijinho 
+        <br>• Cookies de Chocolate e Nozes
+
+
+      </p>
+    </div>
   </div>
-  <div class="capitulo-card">
-    <img src="fotos_ebook_capa_e_etc/pudim e pave.jpg" alt="Pudins e Pavês">
-    <div class="texto">5. Pudins e Pavês</div>
+
+  <div class="receita-card">
+    <img class="receita-img" src="fotos_ebook_capa_e_etc/pudim e pave.jpg" alt="Pudins e Pavês">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span>5. Pudins e Pavês</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+      <p>
+        <br>• Pudim de Chocolate
+        <br>• Pudim de Chocolate com Avelã
+        <br>• Pudim de Chocolate Trufado
+        <br>• Pudim de Chocolate com Prestígio
+        <br>• Pudim de chocolate com Oreo
+        <br>• Pavê de Chocolate com Amendoim
+        <br>• Pavê de Chocolate com Oreo
+        <br>• Pavê de Chocolate com Morango
+        <br>• Pavê de Chocolate com Nozes
+        <br>• Pavê de Chocolate com Nutella
+      </p>
+    </div>
   </div>
-  <div class="capitulo-card">
-    <img src="fotos_ebook_capa_e_etc/trufa e bombom.jpg" alt="Trufas e Bombons">
-    <div class="texto">6. Trufas e Bombons</div>
+
+  <div class="receita-card">
+    <img class="receita-img" src="fotos_ebook_capa_e_etc/trufa e bombom.jpg" alt="Trufas e Bombons">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span>6. Trufas e Bombons</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+      <p>
+      <br>• Trufa de Chocolate com Coco
+      <br>• Trufa de Chocolate com Morango 
+      <br>• Trufa de Chocolate com nozes
+      <br>• Trufa de Chocolate com Creme de Avelã
+      <br>• Trufa de Chocolate com Nutella
+      <br>• Bombom de Chocolate com recheio de Oreo 
+      <br>• Bombom de Chocolate com recheio de Nozes 
+      <br>• Bombom de Chocolate com recheio de Nutella
+      <br>• Bombom de Chocolate com recheio de Beijinho
+      <br>• Bombom de Chocolate com Cappuccino 
+      </p>
+    </div>
   </div>
-  <div class="capitulo-card">
-    <img src="fotos_ebook_capa_e_etc/gourmet.jpg" alt="Gourmet Chocolate">
-    <div class="texto">7. Gourmet Chocolate</div>
+
+  <div class="receita-card">
+    <img class="receita-img" src="fotos_ebook_capa_e_etc/gourmet.jpg" alt="Gourmet Chocolate">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span>7. Gourmet Chocolate</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+      <p>
+        <br>• Fondant de Chocolate
+        <br>• Tiramisu de Chocolate
+        <br>• Panna Cotta de Chocolate
+        <br>• Mil-folhas de Chocolate 
+        <br>• Tarte de Chocolate e Amêndoas 
+        <br>• Soufflé de chocolate 
+        <br>• Fudge de Chocolate
+        <br>• Torta fudge de chocolate
+        <br>• Petit Gâteau de Chocolate 
+        <br>• Rocambole de Chocolate
+        <br>• Cupcake de Chocolate
+        <br>• Torta Holandesa de Chocolate
+        <br>• Tartelete de Chocolate
+        <br>• Torta Sacher de chocolate
+        <br>• Waffle de Chocolate com Sorvete
+        <br>• Palha Italiana de Chocolate e Avelã
+        <br>• Mini Cheesecakes de Chocolate
+        <br>• Bavaroise de Chocolate
+        <br>• Coulant de Chocolate
+      </p>
+    </div>
   </div>
-  <div class="capitulo-card">
-    <img src="fotos_ebook_capa_e_etc/Croissant recheado com Nutella.jpg" alt="Delícias com Nutella">
-    <div class="texto">8. Delícias com Nutella</div>
+
+  <div class="receita-card">
+    <img class="receita-img" src="fotos_ebook_capa_e_etc/Croissant recheado com Nutella.jpg" alt="Delícias com Nutella">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span>8. Delícias com Nutella</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+      <p>
+        <br>• Croissant recheado com Nutella
+        <br>• Crepe de nutella
+        <br>• Pastel de Forno com Nutella e Chocolate
+        <br>• Wrap Tradicional com Nutella, Morango e Chocolate
+        <br>• Muffin de Chocolate com Recheio de Nutella
+        <br>• Omelete de Chocolate com Nutella
+      </p>
+    </div>
   </div>
-  <div class="capitulo-card">
-    <img src="fotos_ebook_capa_e_etc/trança.jpg" alt="Chocolate Amargo">
-    <div class="texto">9. Chocolate Amargo</div>
+
+  <div class="receita-card">
+    <img class="receita-img" src="fotos_ebook_capa_e_etc/trança.jpg" alt="Chocolate Amargo">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span>9. Chocolate Amargo</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+      <p>
+        <br>• Brownie de Chocolate Amargo
+        <br>• Mousse de Chocolate Amargo  
+        <br>• Bolo de Chocolate Amargo
+        <br>• Brigadeiro de Chocolate Amargo  
+        <br>• Cookies de Chocolate Amargo 
+        <br>• Trufas de Chocolate Amargo  
+        <br>• Pavê de Chocolate Amargo
+        <br>• Petit Gâteau de Chocolate Amargo
+        <br>• Donuts com Cobertura de Chocolate Amargo
+        <br>• Trança folhada com recheio de chocolate amargo
+      </p>
+    </div>
   </div>
-  <div class="capitulo-card">
-    <img src="fotos_ebook_capa_e_etc/pizza de chocolate e brigadeiro.jpg" alt="Pizzas de Chocolate e Brigadeiros">
-    <div class="texto">10. Pizzas de Chocolate e Brigadeiros</div>
+
+  <div class="receita-card">
+    <img class="receita-img" src="fotos_ebook_capa_e_etc/pizza de chocolate e brigadeiro.jpg" alt="Pizzas de Chocolate e Brigadeiros">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span>10. Pizzas de Chocolate e 
+        <br>Brigadeiros</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+      <p>
+        <br>• Pizza de Chocolate com Morango
+        <br>• Pizza de Chocolate com Coco 
+        <br>• Pizza de Chocolate com Prestígio
+        <br>• Pizza de Chocolate com Oreo
+        <br>• Pizza de Chocolate com M&M's
+        <br>• Pizza de Chocolate com Sorvete de chocolate 
+        <br>• Pizza de Chocolate com Creme de Avelã
+        <br>• Pizza de Chocolate com Pedaços de Twix
+        <br>• Pizza de Chocolate com Bombom Sonho de Valsa
+        <br>• Pizza de Chocolate com Kit Kat 
+      </p>
+    </div>
   </div>
+
 </div>
 
 
+
+
 <div class="bloco-beneficios">
+
   <div class="beneficio">
     <svg class="icone-beneficios" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" stroke="#D97706" stroke-width="2"/></svg>
     <p>Receitas rápidas e práticas, prontas minutos.</p>
@@ -350,21 +565,21 @@
 <div class="oferta-box">
   <div class="oferta-topo">
     <p class="oferta-topo-titulo">Oferta Especial</p>
-    <p class="oferta-topo-subtitulo">20% de Desconto – de R$147,00 por</p>
+    <p class="oferta-topo-subtitulo">20% de Desconto – de R$121,63 por</p>
   </div>
 
   <div class="oferta-conteudo">
-    <p class="preco-antigo">R$147,00</p>
+    <p class="preco-antigo">R$121,63</p>
 
     <div class="preco-novo">
-      <span class="valor">R$37,00</span>
+      <span class="valor">R$97,30</span>
       <span class="avista">à vista</span>
     </div>
 
-    <p class="parcelado">ou 12x de <strong>R$3,70</strong></p>
+    <p class="parcelado">ou 6x de <strong>R$18,25</strong></p>
 
     <button class="botao-compra">
-      Quero Transformar Meu Café da Manhã Agora! →
+      Quero adquirir meu ebook agora! 
     </button>
 
     <p class="texto-seguro">
@@ -373,17 +588,189 @@
 
     <div class="botoes-pagamento">
       <div class="botao-cartao">
-        <img src="https://img.icons8.com/ios-filled/24/credit-card.png" alt="Cartão" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#dd7700" viewBox="0 0 24 24">
+          <path d="M21 4H3c-1.1 0-2 .9-2 2v2h22V6c0-1.1-.9-2-2-2zm1 6H2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8zM6 16H4v-2h2v2zm4 0H8v-2h2v2z"/>
+        </svg>
+        <span style="margin-left: 8px; color: #dd7700; font-weight: bold;">Cartão</span>
       </div>
+    
       <div class="botao-pix">PIX</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="vitalicio-bloco">
+  <div class="vitalicio-selo">
+    <img src="fotos/7 dias para garantia.png" alt="Selo Vitalício">
+    <h2><span>Acesso vitalício:</span> Invista apenas uma vez e aproveite para sempre!</h2>
+    <p>Você não vai apenas comprar um livro <strong>Você vai investir em:</strong></p>
+  </div>
+
+  <div class="vitalicio-beneficios">
+    <div class="item-garantia-finalizar-compra-vitalicio">
+    <img src="fotos_ebook_capa_e_etc/felicidade.jpg" alt="Liberdade">
+    <div class="icon-text">
+    <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none">
+    <rect x="1" y="1" width="22" height="22" rx="5" fill="#714829" stroke="#714829" stroke-width="1"/>
+    <path d="M16 6H8C6.34 6 5 7.34 5 9V17C5 18.66 6.34 20 8 20H16C17.66 20 19 18.66 19 17V9C19 7.34 17.66 6 16 6Z" stroke="#F8AF26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M9.5 12.5L11 14L14.5 10.5" stroke="#F8AF26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="texto-legenda">Saúde</span>
+    </div>
+    </div>
+
+    <div class="item-garantia-finalizar-compra-vitalicio">
+    <img src="fotos_ebook_capa_e_etc/receitas maravilhosas.jpg" alt="Saúde">
+    <div class="icon-text">
+    <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none">
+    <rect x="1" y="1" width="22" height="22" rx="5" fill="#714829" stroke="#714829" stroke-width="1"/>
+    <path d="M16 6H8C6.34 6 5 7.34 5 9V17C5 18.66 6.34 20 8 20H16C17.66 20 19 18.66 19 17V9C19 7.34 17.66 6 16 6Z" stroke="#F8AF26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M9.5 12.5L11 14L14.5 10.5" stroke="#F8AF26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="texto-legenda">Receitas irresistíveis</span>
+    </div>
+    </div>
+
+    <div class="item-garantia-finalizar-compra-vitalicio">
+      <img src="fotos_ebook_capa_e_etc/criança feliz comendo chocolate.jpg" alt="Qualidade de vida">
+      <div class="icon-text">
+      <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none">
+      <rect x="1" y="1" width="22" height="22" rx="5" fill="#714829" stroke="#714829" stroke-width="1"/>
+      <path d="M16 6H8C6.34 6 5 7.34 5 9V17C5 18.66 6.34 20 8 20H16C17.66 20 19 18.66 19 17V9C19 7.34 17.66 6 16 6Z" stroke="#F8AF26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9.5 12.5L11 14L14.5 10.5" stroke="#F8AF26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="texto-legenda">Felicidade em cada pedaço</span>
+      </div>
+    </div>
+
+    <div class="item-garantia-finalizar-compra-vitalicio">
+      <img src="fotos_ebook_capa_e_etc/momentos memoraveis.jpg" alt="Momentos memoráveis">
+      <div class="icon-text">
+      <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none">
+      <rect x="1" y="1" width="22" height="22" rx="5" fill="#714829" stroke="#714829" stroke-width="1"/>
+      <path d="M16 6H8C6.34 6 5 7.34 5 9V17C5 18.66 6.34 20 8 20H16C17.66 20 19 18.66 19 17V9C19 7.34 17.66 6 16 6Z" stroke="#F8AF26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9.5 12.5L11 14L14.5 10.5" stroke="#F8AF26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="texto-legenda">Momentos memoráveis</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="vitalicio-frases">
+    <div class="frase-bloco">
+      <div class="svg-icon">
+      <svg class="svg-test" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 49" fill="none">
+      <rect x="0.46" y="1.41" width="47.1" height="47.1" rx="10.6" fill="#FFF4EB"/>
+      <rect x="0.46" y="1.41" width="47.1" height="47.1" rx="10.6" stroke="#CECECE" stroke-width="0.92"/>
+      <path d="M11.94 24.71c0 1.55.31 3.09.9 4.52.59 1.43 1.46 2.73 2.55 3.83s2.4 2 3.83 2.59c1.43.59 2.97.89 4.52.89s3.09-.3 4.52-.89c1.43-.59 2.73-1.46 3.83-2.55 1.1-1.1 1.96-2.4 2.55-3.83.59-1.43.9-2.97.9-4.52s-.31-3.09-.9-4.52c-.59-1.43-1.46-2.73-2.55-3.83-1.1-1.1-2.4-1.96-3.83-2.55-1.43-.59-2.97-.9-4.52-.9s-3.09.31-4.52.9c-1.43.59-2.73 1.46-3.83 2.55-1.1 1.1-1.96 2.4-2.55 3.83-.59 1.43-.9 2.97-.9 4.52z" fill="#D81D41" fill-opacity="0.15" stroke="#D81D41" stroke-width="2.62"/>
+      <path d="M21.42 20.04l2.2 4.03 2.24-4.03h2.72l-3.29 5.45 3.35 5.45h-2.71l-2.31-3.93-2.29 3.93h-2.73l3.32-5.45-3.24-5.45h2.72z" fill="#D81D41"/>
+      </svg>
+      </div>
+      <div class="frase-texto">
+      <strong>Chega de gastar uma fortuna</strong> com doces sem graça, que não matam sua vontade e ainda deixam aquela sensação de "não era bem isso".
+      </div>
+    </div>
+  
+    <div class="frase-bloco">
+    <div class="svg-icon">
+    <svg class="svg-test" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 49" fill="none">
+      <rect x="0.46" y="1.41" width="47.1" height="47.1" rx="10.6" fill="#FFF4EB"/>
+      <rect x="0.46" y="1.41" width="47.1" height="47.1" rx="10.6" stroke="#CECECE" stroke-width="0.92"/>
+      <path d="M11.94 24.71c0 1.55.31 3.09.9 4.52.59 1.43 1.46 2.73 2.55 3.83s2.4 2 3.83 2.59c1.43.59 2.97.89 4.52.89s3.09-.3 4.52-.89c1.43-.59 2.73-1.46 3.83-2.55 1.1-1.1 1.96-2.4 2.55-3.83.59-1.43.9-2.97.9-4.52s-.31-3.09-.9-4.52c-.59-1.43-1.46-2.73-2.55-3.83-1.1-1.1-2.4-1.96-3.83-2.55-1.43-.59-2.97-.9-4.52-.9s-3.09.31-4.52.9c-1.43.59-2.73 1.46-3.83 2.55-1.1 1.1-1.96 2.4-2.55 3.83-.59 1.43-.9 2.97-.9 4.52z" fill="#D81D41" fill-opacity="0.15" stroke="#D81D41" stroke-width="2.62"/>
+      <path d="M21.42 20.04l2.2 4.03 2.24-4.03h2.72l-3.29 5.45 3.35 5.45h-2.71l-2.31-3.93-2.29 3.93h-2.73l3.32-5.45-3.24-5.45h2.72z" fill="#D81D41"/>
+    </svg>
+      </div>
+      <div class="frase-texto">
+        <strong>Chega de jogar ingredientes no lixo</strong> por receitas que deram errado.
+      </div>
+    </div>
+  
+    <div class="frase-bloco">
+    <div class="svg-icon">
+    <svg class="svg-test" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 49" fill="none">
+      <rect x="0.46" y="1.41" width="47.1" height="47.1" rx="10.6" fill="#FFF4EB"/>
+      <rect x="0.46" y="1.41" width="47.1" height="47.1" rx="10.6" stroke="#CECECE" stroke-width="0.92"/>
+      <path d="M11.94 24.71c0 1.55.31 3.09.9 4.52.59 1.43 1.46 2.73 2.55 3.83s2.4 2 3.83 2.59c1.43.59 2.97.89 4.52.89s3.09-.3 4.52-.89c1.43-.59 2.73-1.46 3.83-2.55 1.1-1.1 1.96-2.4 2.55-3.83.59-1.43.9-2.97.9-4.52s-.31-3.09-.9-4.52c-.59-1.43-1.46-2.73-2.55-3.83-1.1-1.1-2.4-1.96-3.83-2.55-1.43-.59-2.97-.9-4.52-.9s-3.09.31-4.52.9c-1.43.59-2.73 1.46-3.83 2.55-1.1 1.1-1.96 2.4-2.55 3.83-.59 1.43-.9 2.97-.9 4.52z" fill="#D81D41" fill-opacity="0.15" stroke="#D81D41" stroke-width="2.62"/>
+      <path d="M21.42 20.04l2.2 4.03 2.24-4.03h2.72l-3.29 5.45 3.35 5.45h-2.71l-2.31-3.93-2.29 3.93h-2.73l3.32-5.45-3.24-5.45h2.72z" fill="#D81D41"/>
+      </svg>
+      </div>
+      <div class="frase-texto">
+        <strong>Acabaram-se as puladas de cerca!</strong> Sem mais doces escondidos que podem comprometer sua saúde ou a de quem você ama.
+      </div>
     </div>
   </div>
 </div>
 
+  
+  <div id="quanto-vale-container">
+    <h1><strong>Quanto vale</strong> <span class="light">para você?</span></h1>
+    <p>Já parou para pensar quanto vale a sua felicidade em cada pedaço?</p>
+    <p>E mais: saber que pode comer e se deliciosar em cada receita, 
+      <strong class="highlight">sem se preocupar com ingredientes que podem prejudicar a saúde?</strong>
+    </p>
 
+    <div class="quanto-vale-description">
+      <h2>Parece incrível né!</h2>
+      <span>mas realmente é, o cacau é pura saúde para seu corpo e cabeça!</span>
 
+    </div>
+  </div>
 
+  <div class="grid-container">
+    <img src="fotos/imagens-das-receitas-1.jpg" class="grid-img">
+    <img src="fotos/imagens-das-receitas-2.jpg" class="grid-img">
+    <img src="fotos/imagens-das-receitas-3.jpg" class="grid-img">
+    <img src="fotos/imagens-das-receitas-4.jpg" class="grid-img">
+    <img src="fotos/imagens-das-receitas-5.jpg" class="grid-img">
+    <img src="fotos/imagens-das-receitas-6.jpg" class="grid-img">
 
+  </div>
+  
+<div class="chocolate-aliado-saude">
+  <img src="fotos/chocolate-aliado-saude.jpg" alt="chocolate-aliado-saude">
+</div>
+  
+
+  <div class="passos-compra">
+    <h2 class="titulo-passos">Como acessar após a compra?</h2>
+  
+    <div class="passo">
+      <div class="icone">📧</div>
+      <h3>Passo 1</h3>
+      <p>Após efetuar a compra, abrirá automaticamente a Plataforma onde está o Livro Digital e você receberá também um e-mail com o link para acessar as Receitas de Chocolate.</p>
+    </div>
+  
+    <div class="passo">
+      <div class="icone">⬇️</div>
+      <h3>Passo 2</h3>
+      <p>Abra o e-mail e acesse clicando no link da sua compra no seu dispositivo, de maneira prática e rápida.</p>
+    </div>
+  
+    <div class="passo">
+      <div class="icone">🧑‍💻</div>
+      <h3>Passo 3</h3>
+      <p>Abrirá a plataforma onde o Livro Digital estará, basta clicar em cima e será feito o download automaticamente no seu dispositivo Móvel ou Desktop.</p>
+    </div>
+  </div>
+  
+  
+  <div class="garantia-container">
+    <img src="fotos/garantia de 7 dias.png" alt="Garantia de 7 dias" class="garantia-img">
+  
+    <div class="garantia-texto-opcional">
+      <h2><span class="vermelho">Satisfação Garantida</span><br>e Risco Zero!</h2>
+      <p>Se você adquirir esse produto e por algum motivo não se sentir satisfeito, por um prazo de até 7 dias, devolvemos o seu dinheiro.</p>
+  
+      <div class="garantia-itens">
+        <div class="item-garantia-finalizar-compra">🔒 Compra 100% Segura</div>
+        <div class="item-garantia-finalizar-compra">🛡️ 7 dias de Garantia</div>
+        <div class="item-garantia-finalizar-compra">💲 Reembolso Garantido</div>
+        <div class="item-garantia-finalizar-compra">⭐ Qualidade Garantida</div>
+      </div>
+    </div>
+  </div>
+  
 
 
 
