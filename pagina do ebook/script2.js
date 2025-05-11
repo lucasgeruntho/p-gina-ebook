@@ -110,3 +110,19 @@ carousel.addEventListener('mouseleave', () => isUserInteracting = false);
 // Init
 showCard(currentIndex, false);
 startAutoSlide();
+
+
+
+
+
+document.querySelectorAll('.meu-faq .faq-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const item = header.parentElement;
+    item.classList.toggle('active');
+  });
+});
+
+ 
+
+
+

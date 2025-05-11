@@ -521,8 +521,8 @@ html, body {
     
 }
 .garantia-primary {
-    max-width: 200px;
-    min-width: 200px;
+    max-width: 250px;
+    min-width: 250px;
 }
 .garantia-da-compra-primary img {
     width: 100%;
@@ -745,6 +745,10 @@ html, body {
 border-radius: 10px;
   background-color: #dd7700;
 }
+
+
+
+
   
 .receitas-modulo-container {
   display: flex;
@@ -1039,9 +1043,15 @@ border-radius: 10px;
   }
   
 
+.fundo-vitalicio {
+  background-color: #f0e6cd; /* Cor de fundo desejada */
+  padding: 10px;
+}
+
+
+  
   .vitalicio-bloco {
     max-width: 100%;
-   
     width: 90%;
     margin: 0 auto;
     padding: 20px;
@@ -1049,14 +1059,15 @@ border-radius: 10px;
     border-radius: 16px;
     text-align: center;
     font-family: sans-serif;
-    color: #fff;
-    position: relative;
-    z-index: 1;
+    color: #fff
+   
+   
   }
   
   .vitalicio-selo img {
     width: 80px;
     margin-bottom: 10px;
+   
   }
   
   .vitalicio-selo h2 {
@@ -1082,8 +1093,7 @@ border-radius: 10px;
     align-items: center;
     gap: 16px;
     
-    
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
   .vitalicio-beneficios .item-vitalicio {
@@ -1179,7 +1189,7 @@ border-radius: 10px;
     font-family: sans-serif;
     z-index: 1; 
     color: #3e1e00;
-    border-radius: 12px;
+  
   }
   
   #quanto-vale-container h1 {
@@ -1225,7 +1235,14 @@ border-radius: 10px;
 
 }
 
-
+.ebook-aberto-sumario {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.ebook-aberto-sumario img {
+  display: block;
+}
 
 .grid-img {
   width: 100px; 
@@ -1330,19 +1347,6 @@ border-radius: 10px;
   margin-bottom: 20px;
 }
 
-.garantia-itens {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.garantia-itens .item-garantia-finalizar-compra {
-  background-color: #f6f6f6;
-  border: 1px solid #ccc;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 0.95em;
-}
 
 
 
@@ -1525,7 +1529,7 @@ border-radius: 10px;
   font-family: sans-serif;
 }
 .description-text-categorias-receitas strong {
-  color: bla;
+  color: #eedab5;
 }
 
 
@@ -1585,7 +1589,7 @@ border-radius: 10px;
 .card-container {
   display: flex;
   width: 100%;
-  background-image: url(fotos_ebook_capa_e_etc/Banner\ fundo\ receitas.jpg);
+  background-color: #2b1b0d;
   justify-content: center;
   align-items: center;
   margin-top: -7px;
@@ -1768,9 +1772,189 @@ border-radius: 10px;
   justify-content: center;
   align-items: center;
   height: auto;
+  
 }.banner-capas-logo img {
   display: block;
   margin: 0;
+}
+
+
+.faq-wrapper {
+  max-width: 100%;
+  
+  padding: 24px;
+  background-image: url(fotos/fundo-faq-perguntas.jpg);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.faq-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.faq-title img {
+  width: 100%;
+  height: auto;
+  display: block;
+  
+  margin: 0 auto;
+}
+
+
+.meu-faq {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  background: transparent;
+  overflow: hidden;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.faq-header {
+  padding: 16px;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 16px;
+  background-color: #1f1f1f;
+  color: #ccc;
+  transition: max-height 0.5s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-content {
+  max-height: 500px;
+  padding: 12px 16px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+
+
+
+.btn-ultimo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.pulse-button {
+  background-color: #ff3b3b;
+  color: white;
+  padding: 0.6rem 1.5rem; /* menor altura e largura */
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem; /* menor texto */
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  animation: pulse 2s infinite;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 0 rgba(255, 87, 34, 0.7);
+}
+
+.pulse-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 87, 34, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 87, 34, 0);
+  }
+}
+
+
+
+
+
+
+
+
+.rodape-receitas-chocolate {
+  width: 100%;
+ 
+  background-color: #0c0c12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  position: relative;
+}
+
+.rodape-conteudo {
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+  max-width: 90%;
+}
+
+.logo-rodape {
+    max-width: 90px; /* tamanho reduzido */
+  height: auto;
+  margin-bottom: 3px;
+}
+
+.links-rodape {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.links-rodape a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.links-rodape .divisor {
+  color: #888;
+}
+
+.links-rodape a:hover {
+  color: #fff;
+}
+
+p.copyright {
+  font-size: 13px;
+  color: #ccc;
 }
 
 
