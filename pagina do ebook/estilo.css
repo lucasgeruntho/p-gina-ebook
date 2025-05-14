@@ -19,6 +19,1614 @@ html, body {
 
 
 
+/* NOTEBOOK E COMPUTADOR */
+.oferta-background {
+    background: linear-gradient(90deg, #8b0000, #b22222);
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.oferta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    max-width: 112px; 
+}
+
+.oferta-tempo {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+    flex-shrink: 0; 
+}
+
+.test {
+    font-weight: 700;
+    white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 133px;
+    height: 33px;
+    animation: pulse 1.2s infinite;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, .2);
+    color: gold;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.hoje {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: 12px;
+    flex-shrink: 0; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.img-com-text-2 {
+  margin: 0;                 
+  padding: 0;                
+  width: 100%;               
+  display: flex;             
+  justify-content: center;   
+  align-items: center;      
+}
+
+.img-com-text-2 img {
+  max-width: 100%;           
+  height: auto;              
+  display: block;          
+}
+
+
+.banner-capa-livros-2 {
+  margin: 0;                 
+  padding: 0;                
+  width: 100%;               
+  display: flex;             
+  justify-content: center;   
+  align-items: center;    
+} .banner-capa-livros-2 img {
+ max-width: 100%;           
+  height: auto;              
+  display: block;   
+}
+
+.health-tips-color-backg {
+  background-color: #512b16;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.health-tips-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    width: 100%;
+}
+
+.health-tips-2 img {
+    max-width: 100%;   
+    height: auto;     
+    display: block;    
+    margin: 0 auto;   
+    max-height: 700px; 
+    object-fit: contain;
+}
+
+.img-confira-2 {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    width: 100%;
+} .img-confira-2 img {
+  display: block;
+}
+
+.text-primary-sobre-ebook-2 {
+  display: flex;
+  padding: 0 10px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.text-sobre-ebook-2 {
+    align-items: center;
+    width: auto;
+  
+             
+}.text-sobre-ebook-2 h3 {
+    color: #793928;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    white-space: nowrap;
+    }
+
+
+
+
+
+.description-production-2 {
+  justify-content: center;
+
+  align-items: center;
+  display: flex;
+  width: 100%;
+ 
+}.description-sobre-ebook-2 {
+  justify-content: center;
+  text-align: center;
+}
+
+.description-sobre-ebook-2 h4 {
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 23px;
+}
+
+#description-sobre-ebook-second-text-2 {
+  font-size: 23px;
+ 
+  white-space: nowrap;
+  color: #793928;
+} #receitas-chocolate-2{
+        color: #793928;
+}.text-description-2 p {
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}.text-description-2 {
+  margin-top: 20px;
+}
+
+
+
+
+
+.summary-ebook-2 {
+    width: 100%;
+   
+    padding: 10px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    gap: 10px; 
+}
+
+.summary-2,
+.summary-3,
+.summary-4,
+.summary-5,
+.summary-6 {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 10px;
+    width: 100%; 
+    max-width: 400px; 
+    box-sizing: border-box;
+}
+
+.summary-2 span,
+.summary-3 span,
+.summary-4 span,
+.summary-5 span,
+.summary-6 span {
+    font-size: 16px;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    word-wrap: break-word; 
+    flex-shrink: 1; 
+}
+
+/* Ícones */
+.summary-2 svg,
+.summary-3 svg,
+.summary-4 svg,
+.summary-5 svg,
+.summary-6 svg {
+    width: 20px;
+    height: 20px;
+    color: #BCD454;
+    flex-shrink: 0; 
+}
+
+
+
+
+.primary-button-2 {
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+  }
+  
+  .button-primary-2 {
+   min-width: 280px;
+  max-width: 300px;
+  }
+  
+  .button-primary-2 .custom-button-2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+   
+    background-color: #3b1a05;
+    color: #f8e7d0;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+  .button-primary-2 span {
+    margin-top: -3px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 0;
+    white-space: nowrap;
+  }
+  .button-primary-2 .custom-button-2 .icon-car-2 {
+    width: 22px;
+    height: 22px;
+  }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 26, 5, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(59, 26, 5, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 26, 5, 0);
+  }
+}
+
+.button-primary-2 .custom-button-2 {
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.garantia-da-compra-primary-2 {
+    display: flex;
+    margin-top: 3px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+    
+}
+.garantia-primary-2 {
+    max-width: 250px;
+    min-width: 250px;
+}
+.garantia-da-compra-primary-2 img {
+    width: 100%;
+}
+
+
+
+.benefits-container-2 {
+ width: 100%;
+  max-width: 1000px; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #3b1d0d;
+  padding: 8px;
+ 
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  }
+  
+  .benefit-item-garantia-finalizar-compra-vitalicio-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 6px;
+  
+    text-align: center;
+  }
+  
+  .icon-1-3 {
+    background-color: #2a1409;
+    border: 1px solid #854c1c;
+    border-radius: 4px;
+    padding: 6px 2px; 
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: rgb(151, 104, 68);
+  }
+  
+  .icon-1-3 i {
+    font-size: 16px;
+  }
+  
+  .text-2 {
+    font-weight: bold;
+    font-size: 12px;
+    color: #ffffff;
+  }
+  
+  .divider-2 {
+    width: 1px;
+    background-color: #aa6b39;
+    margin: 0 4px;
+  }
+
+
+
+.centro-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fdf6f2;
+  }
+
+  .bloco-2 {
+    max-width: 600px;
+    text-align: left;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #fdf6f2;
+    color: #3d2b1f;
+    line-height: 1.6;
+  }
+
+  .bloco-2 h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  .bloco h1 strong {
+    font-weight: bold;
+    color: #5a2c0f;
+  }
+
+  .subtitulo-2 {
+    color: #777;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+
+  .itens-description-2 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .icon-description-2 {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+
+  .item-texto {
+    max-width: 600px;
+  }
+
+  .item-texto strong {
+    color: #5a2c0f;
+  }
+
+  .brigadeiro-imagem {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+    margin-top: 40px;
+  }
+  
+
+.previa-receber-2 {
+    justify-content: center;
+    width: 100%;
+    display: block;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  .previa-receber-2 img {
+     display: block;
+  margin: 0 auto;
+  width: 100%; 
+  height: 160px; 
+  padding: 0;
+  border: 0;
+    
+  }
+
+.ebook-open-2 {
+    justify-content: center;
+    width: 100%;
+    display: block;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  } .ebook-open-2 img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+  }
+
+.choco-receitas-container-2 {
+   
+    display: block;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+ 
+    box-sizing: border-box;
+  }
+  .choco-receitas-containe-2 img {
+    display: block;
+  }
+
+.fundo-receitas {
+  width: 100%;
+  height: auto;
+  background-image: url(fotos_ebook_capa_e_etc/Banner\ fundo\ receitas.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   background-attachment: fixed;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.modulo-receitas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.card-receita {
+  flex: 1 1 calc(50% - 30px);
+  max-width: calc(50% - 30px);
+  background-color: transparent;
+  border-radius: 16px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.img-receita {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.toggle-receita {
+  position: relative;
+  background-color: #5c2c06;
+  color: #fff;
+  padding: 14px 50px 14px 18px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+.toggle-receita span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toggle-receita:hover {
+  background-color: #3b1d0d;
+}
+
+.icone-receita {
+  position: absolute;
+  left: 110px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+
+.card-receita.ativo .icone-receita {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.conteudo-receita {
+  display: none;
+  background-color: #fff8ec;
+  color: #3a1f0d;
+  padding: 16px;
+  border-radius: 0 0 12px 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+
+
+.oferta-box-1 {
+    max-width: 400px;
+    width: 90%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    background: #fff8dce1;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .oferta-topo-1 {
+    background-color: #793928;
+    color: white;
+    padding: 20px 15px;
+  }
+  
+  .oferta-topo-titulo-1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .oferta-topo-subtitulo-1 {
+    font-size: 0.95em;
+    margin: 5px 0 0;
+  }
+  
+  .oferta-conteudo-1 {
+    padding: 25px 20px;
+  }
+  
+  .preco-antigo-1 {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  .preco-novo-1 {
+    margin-top: 10px;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #793200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .avista-1 {
+    
+    font-size: 0.6em;
+    background: #fff2cd;
+    color: #793200;
+    border-radius: 12px;
+    padding: 5px 10px;
+  }
+  
+  .parcelado-1 {
+    font-size: 0.9em;
+    margin: 10px 0 0;
+  }
+  
+  .botao-compra-1 {
+    background-color: #dd7700;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .texto-seguro-1 {
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: #666;
+  }
+  
+  .botoes-pagamento-1 {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+  }
+  
+  .botao-cartao-1,
+  .botao-pix-1 {
+    padding: 10px 18px;
+    border-radius: 10px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .botao-cartao-1 {
+    border: 1px solid #ccc;
+   background: #fff8dc;
+    display: flex;
+    align-items: center;
+    border: 2px solid #dd7700;
+
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 10px;
+  }
+  
+  
+  .botao-pix-1 {
+    border: 2px solid #dd7700;
+    color: #dd7700;
+    background: #fff8dc;
+    font-weight: bold;
+  }
+
+
+
+
+.ebook-aberto-sumario-2 {
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.ebook-aberto-sumario-2 img {
+  display: block;
+}
+
+
+.ingredientes-nav {
+  width: 90%;
+  max-width: 352px;        
+  margin: 0 auto;          
+  padding: 10px 20px;      
+  display: flex;
+  background-color: transparent;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.ingredientes-btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+}
+
+.ingredientes-btns button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+.ingredientes-btns button:hover {
+  background-color: transparent;
+}
+.ingredientes-btns svg {
+  fill: white;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  display: block; 
+}
+
+.ingredientes-container {
+  display: flex;
+  width: 100%;
+  background-color: #2b1b0d;
+  justify-content: center;
+  align-items: center;
+  margin-top: -7px;
+  padding: 0 16px;
+}
+
+.ingredientes-wrapper {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 15px;
+  font-family: sans-serif;
+}
+
+.ingredientes-carousel {
+  overflow: hidden;
+  position: relative;
+  height: 360px;
+}
+.carousel-conteudo {
+  display: flex;
+  transition: transform 0.4s ease;
+  width: 100%;
+  border-radius: 15px;
+}
+#carouselInner {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.ingrediente-card {
+  flex-shrink: 0;
+  width: 100%;
+  flex: 0 0 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff8f5;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.ingrediente-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #168a3b;
+  margin-bottom: 10px;
+}
+
+.ingrediente-card h2 {
+  color: #168a3b;
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.ingrediente-card p {
+  color: #333;
+  font-size: 1em;
+  line-height: 1.4em;
+  height: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ingredientes-indicadores {
+  text-align: center;
+  margin-top: -60px;
+  padding: 10px;
+}
+.ingredientes-indicadores .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: white; 
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.ingredientes-indicadores .dot.active {
+  background-color: #e3fbe4; 
+  width: 22px;
+  border-radius: 10px; 
+}
+
+.btn-container-ebook {
+  margin-bottom: 25px;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+}
+.btn-ebook {
+  min-width: 250px;
+  max-width: 220px;
+}
+.ebook-botao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff8f5 ;
+  color: #f8e7d0;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.btn-ebook span {
+  margin-top: -3px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 0;
+  font-size: 1rem;
+  color:rgb(92, 44, 6);
+  white-space: nowrap;
+}
+.ebook-botao .ebook-icon {
+  width: 22px;
+  height: 22px;
+  color: #1A1A1A;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(92, 44, 6, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(92, 44, 6, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(92, 44, 6, 0);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.pagamento-seguro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  border-radius: 2px;
+  margin-bottom: -10px;
+  background-color: white; 
+}
+
+.pagamento-seguro img {
+  padding: 3px; 
+  width: 30%;
+}
+
+
+.ingredientes-descricao{
+  
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  
+}
+.ingredientes-descricao span {
+  color: #fff8f5;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+.ingredientes-descricao strong {
+  color: #eedab5;
+}
+
+
+
+
+
+.bloco-beneficios-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .beneficio-2 {
+    background: #FFFAEB;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    min-width: 30%;
+    max-width: 36%;
+  }
+  
+  .beneficio-2 p {
+    margin: 0;
+    font-size: 15px;
+    color: #1A1A1A;
+  }
+  
+  .icone-beneficios-2 {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+
+.chocolate-benefit-2 {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f5deb3;
+    background-color: #5c2e0d;
+    padding: 20px 40px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+
+  
+.img-beneficios-de-consumir-chocolate-2  {
+    display: flex;
+    background-color: #7b3814;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.img-beneficios-de-consumir-chocolate-2 img {
+    max-width: 100%;   
+    height: auto;     
+    display: block;    
+    margin: 0 auto;   
+    max-height: 400px; 
+    object-fit: contain;
+}
+
+.banner-capas-logo-2 {
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  
+}.banner-capas-logo-2 img {
+  display: block;
+  margin: 0;
+}
+
+
+
+
+.acesso-vitalicio-container {
+  display: block;
+  background-color: #f0e6cd; 
+  padding: 10px;
+}
+
+.bloco-vitalicio {
+  max-width: 100%;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2b1b0d;
+  border-radius: 16px;
+  text-align: center;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.cabecalho-vitalicio img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.cabecalho-vitalicio h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.cabecalho-vitalicio h2 span {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.cabecalho-vitalicio p {
+  font-size: 0.95rem;
+  color: #e5c84d;
+  margin-bottom: 20px;
+}
+
+.beneficios-vitalicio {
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beneficios-vitalicio .beneficio-item {
+  width: 100%;
+  max-width: 280px;
+  min-width: 280px;
+  background-color: #442c18;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+}
+.beneficio-item {
+  width: 45%; 
+  max-width: 280px;
+  background-color: #442c18;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.beneficios-vitalicio .beneficio-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+.icone-texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.icone-check {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  margin-left: -200px;
+  flex-shrink: 0;
+}
+
+.legenda-texto {
+  font-size: 0.9rem;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #fff;
+  width: 0;
+}
+
+.frases-vitalicio {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.frase-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.icone-frase {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.icone-frase svg {
+  width: 100%;
+  height: 100%;
+}
+
+.texto-frase {
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.texto-frase strong {
+  color: #FFD700;
+  display: inline;
+}
+.beneficio-item img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+
+
+
+.chocolate-aliado-saude-2  {
+    display: flex;
+    background-color: #f1e1ca; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.chocolate-aliado-saude-2 img {
+    max-width: 100%;   
+    height: auto;     
+    display: block;    
+    margin: 0 auto;   
+    max-height: 500px; 
+    object-fit: contain;
+}
+
+
+
+
+
+
+  #quanto-vale-container-2 {
+    position: relative;
+    display: block;
+   justify-content: center;
+   align-items: center;
+    max-width: 100%;
+    background: #fffaf5;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    z-index: 1; 
+    color: #3e1e00;
+  
+  }
+  
+  #quanto-vale-container-2 h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  #quanto-vale-container-2 .light-2 {
+    font-weight: 300;
+    color: #a5764f;
+  }
+  
+  #quanto-vale-container-2 p {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #5c4c3c;
+  }
+  
+  #quanto-vale-container-2 .highlight-2 {
+    color: #5c2e00;
+  }
+  
+.quanto-vale-description-2 h2{
+  font-size: 1.8em;
+}
+
+
+
+
+.grid-img-2 {
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
+  border: 2px solid #ccc; 
+  border-radius: 8px; 
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.grid-container-2 {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: rgb(255, 250, 245);
+  justify-content: center;
+}
+
+
+
+
+.ls-bloco-oferta-2 {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.ls-card-2 {
+  background: #12162c;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  text-align: center;
+}
+.ls-card-2 img {
+  max-width: 300px;
+ min-height: 90px;
+}
+
+.ls-logo-2 {
+  max-width: 120px;
+  margin-bottom: 16px;
+}
+
+.ls-titulo-2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.ls-destaque-2 {
+  color: #4a63ff;
+  font-weight: bold;
+}
+
+.ls-texto-2 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.ls-preco-antigo-2 {
+  font-size: 1rem;
+  margin: 16px 0 0;
+  color: #aaa;
+}
+
+.ls-preco-novo-2 {
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+.ls-preco-2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 4px 0 16px;
+}
+
+.ls-obs {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.ls-atencao-2 {
+  font-size: 0.85rem;
+  color: #f8d57e;
+  margin-bottom: 20px;
+}
+
+.ls-botao-2 {
+  display: inline-block;
+  background: #ff3b3b;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.ls-botao-2:hover {
+  background: #e63232;
+}
+
+
+@keyframes pulse1-2 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(92, 44, 6, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(92, 44, 6, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(92, 44, 6, 0);
+  }
+}
+
+.pulse1-2 {
+  animation: pulse 2s infinite;
+}
+
+.passos-compra-2 {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row; /* muda de coluna para linha */
+  gap: 20px;
+  justify-content: center; /* centraliza os itens */
+  flex-wrap: wrap; /* quebra linha se não couber */
+  font-family: sans-serif;
+}
+
+.titulo-passos-2 {
+  width: 100%; /* garante que o título ocupe toda a largura */
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.passo-2 {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 24px;
+  text-align: center;
+  width: 280px; /* largura fixa para caber lado a lado */
+  box-sizing: border-box;
+}
+
+.passo-2 .icone-2 {
+  font-size: 32px;
+  color: #e66c00;
+  margin-bottom: 12px;
+}
+
+.passo-2 h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 12px;
+}
+
+.passo-2 p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+
+
+.garantia-container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 90%;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+  position: relative;
+}
+
+.garantia-img-2 {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.garantia-texto-opcional-2 h2 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.garantia-texto-opcional-2 .vermelho-2 {
+  color: #ff5c5c;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.garantia-texto-opcional-2 p {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.faq-background {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(fotos/fundo-faq-perguntas.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* <- Isso mantém o fundo fixo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px;
+  box-sizing: border-box;
+}
+
+
+.faq-container {
+   max-width: 800px;
+  width: 100%;
+  padding: 24px;
+
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.faq-header-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.faq-header-image img {
+  width: 40%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-question {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-question:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.faq-toggle {
+  padding: 16px;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 16px;
+  background-color: #1f1f1f;
+  color: #ccc;
+  transition: max-height 0.5s ease, padding 0.4s ease;
+}
+
+.faq-question.active .faq-answer {
+  max-height: 500px;
+  padding: 12px 16px;
+}
+
+.faq-question.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.cta-button {
+  background-color: #ff3b3b;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  animation: pulse 2s infinite;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 0 rgba(255, 87, 34, 0.7);
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse3 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 87, 34, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 87, 34, 0);
+  }
+}
+
+
+
+
+
+
 
 
 
@@ -27,6 +1635,42 @@ html, body {
 
 @media screen and  (max-width: 768px){
  
+
+.img-com-text-2,
+.banner-capa-livros-2,
+.health-tips-color-backg,
+.img-confira-2,
+.description-production-2,
+.text-primary-sobre-ebook-2,
+.summary-ebook-2,
+.primary-button-2,
+.garantia-da-compra-primary-2,
+.previa-receber-2,
+.ebook-open-2,
+.benefits-container-2,
+.centro-2,
+.fundo-receitas,
+.oferta-box-1,
+.ebook-aberto-sumario-2,
+.ingredientes-container,
+.bloco-beneficios-2,
+.chocolate-benefit-2,
+.img-beneficios-de-consumir-chocolate-2,
+.acesso-vitalicio-container,
+.banner-capas-logo-2,
+.chocolate-aliado-saude-2,
+#quanto-vale-container-2,
+.ls-bloco-oferta-2,
+.grid-container-2,
+.garantia-container-2,
+.faq-background,
+.passos-compra-2,
+.pagamento-seguro{
+  display: none;
+}
+
+
+
 
   * {
     margin: 0;
@@ -40,9 +1684,6 @@ html, body {
     margin: 0;
     padding: 0;
 
-
-
-
 .container-oferta-mobile {
     width: 100%;
     padding: 0 20px;
@@ -53,7 +1694,6 @@ html, body {
 }
           
 .banner {
- 
     display: flex;
     align-items: center;
     justify-content: flex-start; 
@@ -93,37 +1733,37 @@ html, body {
           
           
 
-  .img-principal img {
-    height: 170px;
-    opacity: 1 !important;
-    width: 100%;
-    display: block;
+    .img-principal img {
+        height: 170px;
+        opacity: 1 !important;
+        width: 100%;
+        display: block;
                    
 }
            
         
                   
-  .img-com-text {
-    display: block;
+    .img-com-text {
+        display: block;
                
 }
            
-.banner-capa-livros{
-  width: 100%;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  opacity: 1;
-  margin-top: -18px;
+    .banner-capa-livros{
+        width: 100%;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        opacity: 1;
+        margin-top: -18px;
 }
            
            
-.banner-capa-livros img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 100%;
+    .banner-capa-livros img {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-width: 100%;
 }
            
 .img-principal-segunda,
@@ -179,27 +1819,27 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-  .description-sobre-ebook {
-    margin-top: 30px;
-    margin-left: -20px;
-    text-align: center; 
-}
+    .description-sobre-ebook {
+        margin-top: 30px;
+        margin-left: -20px;
+        text-align: center; 
+    }
           
-  #description-sobre-ebook-second-text {
-  font-size: 23px;
-  margin-left: 20px;
-  white-space: nowrap;
-  color: #793928;
-} 
-  #a-cada{
-    color: black;
-}
-  #primary-text-description{
-  margin-left: 28px;
-  font-size: 23px;
-  white-space: nowrap;
-  width: 0;
-}
+    #description-sobre-ebook-second-text {
+    font-size: 23px;
+    margin-left: 20px;
+    white-space: nowrap;
+    color: #793928;
+    } 
+    #a-cada{
+       color: black;
+    }
+    #primary-text-description{
+    margin-left: 28px;
+    font-size: 23px;
+    white-space: nowrap;
+    width: 0;
+    }
     #third-description-ebook {
    white-space: nowrap;
     font-size: 23px;
@@ -241,18 +1881,18 @@ html, body {
           
        /* subtext*/
        
-.text-description {
-    width: 100%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    .text-description {
+       width: 100%;
+       margin-top: 30px;
+      display: flex;
+       justify-content: center;
+       align-content: center;
      
     }
-.text-description span{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
-    text-align: center;
+    .text-description span{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+        text-align: center;
      
 }
 .summary-ebook {
@@ -262,9 +1902,9 @@ html, body {
     display: flex;
     margin-top: 20px;
     flex-direction: column;
-    align-items: center; 
+    align-items: center; /* centraliza os blocos horizontalmente */
     justify-content: center;
-    gap: 10px; 
+    gap: 10px; /* espaçamento entre os blocos */
 }
 
 .summary-1,
@@ -516,9 +2156,9 @@ html, body {
   .ebook-open {
     justify-content: center;
     width: 100%;
-    display: block;
     align-items: center;
     margin: 0;
+    display: block;
     padding: 0;
     border: 0;
   } .ebook-open img {
@@ -546,8 +2186,8 @@ html, body {
     padding: 5px 10px 8px;
   }
   .choco-receitas-container {
-   
-    display: block;
+   display: block;
+    
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -719,8 +2359,8 @@ border-radius: 10px;
   .chocolate-benefit {
     margin: 0;
     width: 100%;
-    padding: 0;
     display: block;
+   padding: 0;
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
@@ -754,8 +2394,8 @@ border-radius: 10px;
   
   .oferta-box {
     max-width: 400px;
-    width: 90%;
     display: block;
+    width: 90%;
     justify-content: center;
     align-items: center;
     margin: 40px auto;
@@ -1057,7 +2697,7 @@ border-radius: 10px;
 
 .chocolate-aliado-saude {
  
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -1074,9 +2714,9 @@ border-radius: 10px;
 
 .ebook-aberto-sumario {
   width: 100%;
-  display: block;
   justify-content: center;
   align-items: center;
+  display: block;
 }
 .ebook-aberto-sumario img {
   display: block;
@@ -1278,7 +2918,7 @@ border-radius: 10px;
 }
 
 
-@keyframes pulse1 {
+@keyframes pulse {
   0% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(92, 44, 6, 0.4);
@@ -1293,7 +2933,7 @@ border-radius: 10px;
   }
 }
 
-.pulse1 {
+.pulse {
   animation: pulse 2s infinite;
 }
 
@@ -1520,9 +3160,9 @@ border-radius: 10px;
 }
 
 .card-indicators .dot.active {
-  background-color: #e3fbe4; 
+  background-color: #e3fbe4; /* bolinha clara */
   width: 22px;
-  border-radius: 10px; 
+  border-radius: 10px; /* deixa oval para simular o efeito da imagem */
 }
 
 
@@ -1742,9 +3382,15 @@ border-radius: 10px;
 }
 
 
+
+
+
+
+
+
 .rodape-receitas-chocolate {
   width: 100%;
-
+ 
   background-color: #0c0c12;
   display: flex;
   align-items: center;
@@ -1761,7 +3407,7 @@ border-radius: 10px;
 }
 
 .logo-rodape {
-    max-width: 90px;
+    max-width: 90px; /* tamanho reduzido */
   height: auto;
   margin-bottom: 3px;
 }
@@ -1791,93 +3437,11 @@ p.copyright {
 }
 
 
-
-
-
-
-
 }
 }
   
 
 /* CELULAR MOVEL FECHAMENTO */
-
-
-
-
-
-
-/* NOTEBOOK E COMPUTADOR */
-.oferta-background {
-    background: linear-gradient(90deg, #8b0000, #b22222);
-    height: 55px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-}
-
-.oferta-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; 
-    max-width: 112px; 
-}
-
-.oferta-tempo {
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    font-weight: bold;
-    color: #fff;
-    font-size: 18px;
-    white-space: nowrap;
-    flex-shrink: 0; 
-}
-
-.test {
-    font-weight: 700;
-    white-space: nowrap;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 133px;
-    height: 33px;
-    animation: pulse 1.2s infinite;
-    border-radius: 4px;
-    background: rgba(0, 0, 0, .2);
-    color: gold;
-    font-size: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.hoje {
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    font-size: 18px;
-    color: #fff;
-    font-weight: bold;
-    white-space: nowrap;
-    margin-left: 12px;
-    flex-shrink: 0; 
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.7;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-
 
 
 
@@ -1916,11 +3480,12 @@ p.copyright {
 .ls-bloco-oferta,
 .passos-compra,
 .garantia-container,
-.faq-wrapper,
 .btn-ultimo,
 .rodape-receitas-chocolate,
 .banner,
-.chocolate-aliado-saude {
+.chocolate-aliado-saude,
+.img-principal,
+.faq-wrapper {
   display: none;
 }
 

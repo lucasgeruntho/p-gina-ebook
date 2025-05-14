@@ -72,6 +72,16 @@ document.getElementById("lead-form").addEventListener("submit", function (e) {
   }
 
 
+  function toggleConteudo2(el) {
+    const card = el.closest('.card-receita');
+    const conteudo = card.querySelector('.conteudo-receita');
+    const isOpen = conteudo.style.display === 'block';
+
+    conteudo.style.display = isOpen ? 'none' : 'block';
+    card.classList.toggle('ativo', !isOpen);
+  }
+
+
 
 
 
