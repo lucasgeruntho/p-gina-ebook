@@ -75,27 +75,7 @@ if (isset($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['whatsapp
                 // Continua mesmo se o e-mail falhar
             }
 
-            // Envia saudação via WhatsApp
-            $numeroComDDI = '55' . preg_replace('/\D/', '', $whatsapp);
-            $mensagem = "🍫 Olá $nome! Bem-vindo(a) ao 100 Receitas de Chocolate! Preparamos algo especial pra você.";
-            $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-text";
-            $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
-
-            $dados = [
-                "phone" => $numeroComDDI,
-                "message" => $mensagem
-            ];
-
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($dados));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                'Content-Type: application/json',
-                'Client-Token: ' . $clientToken
-            ]);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_exec($ch);
-            curl_close($ch);
+           
 
             // Agendar lembretes de 2, 5 e 10 minutos
 $dataLembrete2 = date('Y-m-d H:i:s', strtotime('+2 minutes', strtotime($dataCadastro)));

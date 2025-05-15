@@ -903,14 +903,14 @@
             <path fill-rule="evenodd" d="M11 4.717c-2.286-.58-4.16-.756-7.045-.71A1.99 1.99 0 0 0 2 6v11c0 1.133.934 2.022 2.044 2.007 2.759-.038 4.5.16 6.956.791V4.717Zm2 15.081c2.456-.631 4.198-.829 6.956-.791A2.013 2.013 0 0 0 22 16.999V6a1.99 1.99 0 0 0-1.955-1.993c-2.885-.046-4.76.13-7.045.71v15.081Z" clip-rule="evenodd"/>
           </svg>   
          
-      <span>+200 Páginas</span>
+      <span>+300 Páginas</span>
     </div>
   
     <div class="summary-2">
         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z" clip-rule="evenodd"/>
           </svg>
-      <span>Dividido em 10 capítulos</span>
+      <span>Dividido em 11 capítulos</span>
     </div>
     <div class="summary-3">
         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -1041,7 +1041,7 @@
 
 
 <div class="choco-receitas-container">
-   <img src="fotos/banner-10-categorias.jpg" alt="banner-capitulos">
+   <img src="fotos/banner-11-capitulos.png" alt="banner-capitulos">
 </div>
 
 
@@ -1277,8 +1277,7 @@
   <div class="receita-card">
     <img class="receita-img" src="fotos_ebook_capa_e_etc/pizza de chocolate e brigadeiro.jpg" alt="Pizzas de Chocolate e Brigadeiros">
     <div class="receita-toggle" onclick="toggleConteudo(this)">
-      <span>10. Pizzas de Chocolate e 
-        <br>Brigadeiros</span>
+      <span>10. Pizzas de Chocolate</span>
       <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
       </svg>
@@ -1297,8 +1296,31 @@
         <br>• Pizza de Chocolate com Kit Kat 
       </p>
     </div>
+    
   </div>
-
+<div class="receita-card">
+    <img class="receita-img" src="fotos/capa-brigadeiro.jpg" alt="Chocolate Amargo">
+    <div class="receita-toggle" onclick="toggleConteudo(this)">
+      <span>9. Brigadeiro</span>
+      <svg class="receita-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      </svg>
+    </div>
+    <div class="receita-conteudo">
+      <p>
+        <br>• Brigadeiro Recheado com Morango
+        <br>• Brigadeiro Recheado com Beijinho  
+        <br>• Brigadeiro Recheado com Nutella
+        <br>• Brigadeiro Recheado com Doce de Leite  
+        <br>• Brigadeiro Recheado com Biscoito Oreo
+        <br>• Brigadeiro Recheado com Paçoca 
+        <br>• Brigadeiro Recheado com Creme de Maracujá
+        <br>• Brigadeiro Recheado com Raffaello
+        <br>• Brigadeiro Recheado com Ganache de Chocolate Meio Amargo
+        <br>• Brigadeiro Recheado com Café Cremoso
+      </p>
+    </div>
+  </div>
 </div>
 
 
@@ -1781,7 +1803,23 @@
 
 <!-- FECHAMENTO-->
 
+<div id="popup-overlay">
+    <div id="newsletter-popup">
+      <form id="lead-form">
+        <h3>Preencha seus dados para continuar navegando 🍫</h3>
+        <div class="input-row">
+          <input type="text" name="nome" placeholder="Nome" required>
+          <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+        </div>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <input type="text" name="whatsapp" id="whatsapp" placeholder="WhatsApp (ex: (11) 91234-5678)" required>
+        <button type="submit">Finalizar!</button>
+        <div id="success-message">🎉 Cadastro realizado com sucesso!</div>
+      </form>
+    </div>
+  </div>
 
+ 
 
 
 
