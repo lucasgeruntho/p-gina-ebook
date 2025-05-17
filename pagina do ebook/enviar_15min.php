@@ -14,7 +14,7 @@ if ($conexao->connect_error) {
 $agora = date('Y-m-d H:i:s');
 
 $sql = "SELECT * FROM lembretes_whatsapp 
-        WHERE lembrete_2min <= ? AND enviado_2min = 0";
+        WHERE lembrete_15min <= ? AND enviado_15min = 0";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $agora);
 $stmt->execute();
@@ -24,7 +24,8 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "👋 Oi $nome! Tudo bem por aí? Em breve você receberá um conteúdo especial de chocolate 🍫!";
+    $mensagem = "Ei, $nome! As receitas estão te esperando para você se deliciar 🎁 Não perca! Finalize sua compra aqui: https://pay.kiwify.com.br/ETvzGbe";
+
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-text";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
 
@@ -44,8 +45,8 @@ while ($row = $result->fetch_assoc()) {
     curl_exec($ch);
     curl_close($ch);
 
-    // Marca como enviada
-    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_2min = 1 WHERE id = ?");
+    // Marca como enviado
+    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_15min = 1 WHERE id = ?");
     $update->bind_param("i", $row['id']);
     $update->execute();
     $update->close();

@@ -13,8 +13,9 @@ if ($conexao->connect_error) {
 
 $agora = date('Y-m-d H:i:s');
 
+// Buscar leads cujo lembrete de 3 minutos já passou e ainda não foi enviado
 $sql = "SELECT * FROM lembretes_whatsapp 
-        WHERE lembrete_saudacao <= ? AND enviado_saudacao = 0";
+        WHERE lembrete_3min <= ? AND enviado_3min = 0";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $agora);
 $stmt->execute();
@@ -24,15 +25,23 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "🍫 Olá $nome! Seja bem-vindo(a) ao 100 Receitas de Chocolate! Agradeçemos pelo seu cadastro em nosso site!";
-    $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-text";
+    // Mensagem de texto acima
+    $mensagem = "🎁 Olá $nome! Olha só o que preparamos para você:";
+
+    // URL da imagem (substitua por sua imagem real)
+    $imagemUrl = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/mandando_o_cliente_pra_finalizar_a_compra_oficial.png";
+
+    // API Z-API
+    $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-image";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
 
     $dados = [
         "phone" => $numero,
-        "message" => $mensagem
+        "image" => $imagemUrl,
+        "caption" => $mensagem
     ];
 
+    // Enviar imagem via curl
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($dados));
@@ -44,8 +53,8 @@ while ($row = $result->fetch_assoc()) {
     curl_exec($ch);
     curl_close($ch);
 
-    // Marca como enviada
-    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_saudacao = 1 WHERE id = ?");
+    // Marcar como enviado
+    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_3min = 1 WHERE id = ?");
     $update->bind_param("i", $row['id']);
     $update->execute();
     $update->close();

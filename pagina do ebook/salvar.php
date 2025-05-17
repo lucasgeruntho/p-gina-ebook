@@ -8,7 +8,6 @@ require 'phpmailer/src/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Conexão com o banco
 $host = "localhost";
 $usuario = "u229005482_lucasgeruntho";
 $senha = "Vitorebety1@";
@@ -26,7 +25,6 @@ if (isset($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['whatsapp
     $whatsapp = trim($_POST['whatsapp']);
     $dataCadastro = date('Y-m-d H:i:s');
 
-    // Verifica se o e-mail já está cadastrado
     $verifica = $conexao->prepare("SELECT id FROM leads WHERE email = ?");
     $verifica->bind_param("s", $email);
     $verifica->execute();
@@ -35,14 +33,13 @@ if (isset($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['whatsapp
     if ($verifica->num_rows > 0) {
         echo "ja_cadastrado";
     } else {
-        // Insere na tabela leads
         $sql = $conexao->prepare("INSERT INTO leads (nome, sobrenome, email, whatsapp, data_cadastro) VALUES (?, ?, ?, ?, ?)");
         $sql->bind_param("sssss", $nome, $sobrenome, $email, $whatsapp, $dataCadastro);
 
         if ($sql->execute()) {
             $idLead = $conexao->insert_id;
 
-            // Envia e-mail de boas-vindas
+            // Envio de e-mail
             $mail = new PHPMailer(true);
             try {
                 $mail->CharSet = 'UTF-8';
@@ -61,7 +58,7 @@ if (isset($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['whatsapp
                 $mail->Subject = 'Bem-vindo(a) ao Receitas de Chocolate!';
                 $mail->Body = "
                     <html>
-                    <body style='font-family: Arial, sans-serif; color: #333;'>
+                    <body>
                         <h2>Olá, $nome!</h2>
                         <p>Obrigado por se cadastrar em nosso site.</p>
                         <p>Um abraço da equipe <strong>100 Receitas de Chocolate</strong>!</p>
@@ -71,41 +68,21 @@ if (isset($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['whatsapp
                 $mail->AltBody = "Olá, $nome! Obrigado por se cadastrar.";
 
                 $mail->send();
-            } catch (Exception $e) {
-                // Continua mesmo se o e-mail falhar
-            }
+            } catch (Exception $e) {}
 
-            // Envia saudação via WhatsApp
+            // Agendamento dos lembretes
             $numeroComDDI = '55' . preg_replace('/\D/', '', $whatsapp);
-            $mensagem = "🍫 Olá $nome! Bem-vindo(a) ao 100 Receitas de Chocolate! Preparamos algo especial pra você.";
-            $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-text";
-            $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
+            $dataLembrete5min = date('Y-m-d H:i:s', strtotime('+5 minutes', strtotime($dataCadastro)));
+            $dataLembrete15min = date('Y-m-d H:i:s', strtotime('+15 minutes', strtotime($dataCadastro)));
+            $dataLembrete30min = date('Y-m-d H:i:s', strtotime('+30 minutes', strtotime($dataCadastro)));
+            $dataLembrete2000 = date('Y-m-d 20:00:00');
 
-            $dados = [
-                "phone" => $numeroComDDI,
-                "message" => $mensagem
-            ];
-
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($dados));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                'Content-Type: application/json',
-                'Client-Token: ' . $clientToken
-            ]);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_exec($ch);
-            curl_close($ch);
-
-            // Agendar lembretes de 2, 5 e 10 minutos
-$dataLembrete2 = date('Y-m-d H:i:s', strtotime('+2 minutes', strtotime($dataCadastro)));
-$dataLembrete5 = date('Y-m-d H:i:s', strtotime('+5 minutes', strtotime($dataCadastro)));
-$dataLembrete10 = date('Y-m-d H:i:s', strtotime('+10 minutes', strtotime($dataCadastro)));
-
-$stmtLembrete = $conexao->prepare("INSERT INTO lembretes_whatsapp (lead_id, nome, telefone, data_cadastro, lembrete_2, lembrete_5, lembrete_10) VALUES (?, ?, ?, ?, ?, ?, ?)");
-$stmtLembrete->bind_param("issssss", $idLead, $nome, $numeroComDDI, $dataCadastro, $dataLembrete2, $dataLembrete5, $dataLembrete10);
-$stmtLembrete->execute();
-$stmtLembrete->close();
+            $stmtLembrete = $conexao->prepare("INSERT INTO lembretes_whatsapp 
+                (lead_id, nome, telefone, data_cadastro, lembrete_saudacao, lembrete_15min, lembrete_30min, lembrete_2000) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmtLembrete->bind_param("isssssss", $idLead, $nome, $numeroComDDI, $dataCadastro, $dataLembrete5min, $dataLembrete15min, $dataLembrete30min, $dataLembrete2000);
+            $stmtLembrete->execute();
+            $stmtLembrete->close();
 
             echo "sucesso";
         } else {
