@@ -14,7 +14,7 @@ if ($conexao->connect_error) {
 $agora = date('Y-m-d H:i:s');
 
 $sql = "SELECT * FROM lembretes_whatsapp 
-        WHERE lembrete_1330 <= ? AND enviado_1330 = 0";
+        WHERE lembrete_2230 <= ? AND enviado_2230 = 0";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $agora);
 $stmt->execute();
@@ -24,10 +24,7 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "⏳ Olá $nome! 🍫 Aproveite 20% de desconto do Livro 100 Receitas de Chocolate!
- Garanta agora suas receitas irresistíveis com um preço especial.
- Não perca essa chance de adoçar seu dia:
-👉 https://receitasdechocolate.shop";
+    $mensagem = "⏰ $nome, a oferta termina em instantes! Finalize sua compra agora antes que acabe 👉 https://receitasdechocolate.shop/finalizar";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-text";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
@@ -48,8 +45,8 @@ while ($row = $result->fetch_assoc()) {
     curl_exec($ch);
     curl_close($ch);
 
-    // Marcar como enviado
-    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_1330 = 1 WHERE id = ?");
+    // Marca como enviado
+    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_2230 = 1 WHERE id = ?");
     $update->bind_param("i", $row['id']);
     $update->execute();
     $update->close();

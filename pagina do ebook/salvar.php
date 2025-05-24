@@ -58,7 +58,7 @@ if (isset($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['whatsapp
                 $mail->Subject = 'Bem-vindo(a) ao Receitas de Chocolate!';
                 $mail->Body = "
                     <html>
-                    <body>
+                    <body style='font-family: Arial, sans-serif; color: #333;'>
                         <h2>Olá, $nome!</h2>
                         <p>Obrigado por se cadastrar em nosso site.</p>
                         <p>Um abraço da equipe <strong>100 Receitas de Chocolate</strong>!</p>
@@ -66,21 +66,44 @@ if (isset($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['whatsapp
                     </html>
                 ";
                 $mail->AltBody = "Olá, $nome! Obrigado por se cadastrar.";
-
                 $mail->send();
             } catch (Exception $e) {}
 
             // Agendamento dos lembretes
             $numeroComDDI = '55' . preg_replace('/\D/', '', $whatsapp);
-            $dataLembrete5min = date('Y-m-d H:i:s', strtotime('+5 minutes', strtotime($dataCadastro)));
-            $dataLembrete15min = date('Y-m-d H:i:s', strtotime('+15 minutes', strtotime($dataCadastro)));
-            $dataLembrete30min = date('Y-m-d H:i:s', strtotime('+30 minutes', strtotime($dataCadastro)));
-            $dataLembrete2000 = date('Y-m-d 20:00:00');
+
+            $dataLembrete5min        = date('Y-m-d H:i:s', strtotime('+5 minutes', strtotime($dataCadastro)));
+            $dataLembrete15min       = date('Y-m-d H:i:s', strtotime('+15 minutes', strtotime($dataCadastro)));
+            $dataLembrete30min       = date('Y-m-d H:i:s', strtotime('+30 minutes', strtotime($dataCadastro)));
+            $dataLembrete2000        = date('Y-m-d 20:00:00');
+            $dataLembrete1130        = date('Y-m-d 11:30:00', strtotime('+1 day'));
+            $dataLembrete1330        = date('Y-m-d 13:30:00', strtotime('+1 day'));
+            $dataLembrete1630        = date('Y-m-d 16:30:00', strtotime('+1 day'));
+            $dataLembrete2000Dia2    = date('Y-m-d 20:00:00', strtotime('+1 day'));
+            $dataLembrete2230        = date('Y-m-d 22:30:00', strtotime('+1 day'));
+            $dataLembreteDia3_1130   = date('Y-m-d 11:30:00', strtotime('+2 days'));
+            $dataLembreteDia3_1330   = date('Y-m-d 13:30:00', strtotime('+2 days'));
+            $dataLembreteDia3_1630   = date('Y-m-d 16:30:00', strtotime('+2 days'));
+            $dataLembreteDia3_2000   = date('Y-m-d 20:00:00', strtotime('+2 days'));
+            $dataLembreteDia3_2230   = date('Y-m-d 22:30:00', strtotime('+2 days'));
 
             $stmtLembrete = $conexao->prepare("INSERT INTO lembretes_whatsapp 
-                (lead_id, nome, telefone, data_cadastro, lembrete_saudacao, lembrete_15min, lembrete_30min, lembrete_2000) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmtLembrete->bind_param("isssssss", $idLead, $nome, $numeroComDDI, $dataCadastro, $dataLembrete5min, $dataLembrete15min, $dataLembrete30min, $dataLembrete2000);
+                (lead_id, nome, telefone, data_cadastro, 
+                 lembrete_saudacao, lembrete_15min, lembrete_30min, 
+                 lembrete_2000, lembrete_1130, lembrete_1330, lembrete_1630, 
+                 lembrete_2000_dia2, lembrete_2230, 
+                 lembrete_dia3_1130, lembrete_dia3_1330, lembrete_dia3_1630, 
+                 lembrete_dia3_2000, lembrete_dia3_2230) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmtLembrete->bind_param(
+                "isssssssssssssssss",
+                $idLead, $nome, $numeroComDDI, $dataCadastro,
+                $dataLembrete5min, $dataLembrete15min, $dataLembrete30min,
+                $dataLembrete2000, $dataLembrete1130, $dataLembrete1330,
+                $dataLembrete1630, $dataLembrete2000Dia2, $dataLembrete2230,
+                $dataLembreteDia3_1130, $dataLembreteDia3_1330, $dataLembreteDia3_1630,
+                $dataLembreteDia3_2000, $dataLembreteDia3_2230
+            );
             $stmtLembrete->execute();
             $stmtLembrete->close();
 

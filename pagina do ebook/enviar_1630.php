@@ -24,8 +24,34 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "🍫 Olá $nome! O dia está acabando, mas ainda dá tempo de aproveitar nossa oferta especial!";
-    $imagemUrl = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/mandando_o_cliente_pra_finalizar_a_compra_oficial.png"; 
+    $mensagem = "🍫 Olá $nome! 🍫☕ Café da Tarde com Sabor de Chocolate! Que tal um Brownie de Chocolate com Nutella e Nozes? 😍
+
+    Aquela pausa merecida da tarde pode ficar ainda mais gostosa com esse brownie irresistível: por fora macio, por dentro cremoso, com cobertura de Nutella e o crocante das nozes. Uma explosão de sabor que combina perfeitamente com um café!
+
+🛒 Anota aí os ingredientes:
+
+150g de manteiga sem sal
+
+200g de chocolate meio amargo picado
+
+3 ovos grandes
+
+150g de açúcar refinado
+
+75g de farinha de trigo
+
+30g de cacau em pó sem açúcar
+
+1/2 colher de chá de sal
+
+200g de Nutella
+
+100g de nozes picadas grosseiramente
+    
+Uma sobremesa geladinha, cremosa e irresistível, que derrete na boca e conquista no primeiro pedaço! ❄️🍫
+
+    ";
+    $imagemUrl = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/receita_brownie_de_chocolate_com_nozes.jpg"; 
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-image";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';

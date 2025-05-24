@@ -24,9 +24,26 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "☀️ Bom dia, $nome! Que tal começar a manhã com algo doce? 🍫 Confira agora nossa receita especial!";
+    $mensagem = "☀️ Bom dia, $nome! 🍫 Sobremesa Especial para o Almoço? Que tal um Sorvete de Chocolate Trufado caseiro? 😍
+    Nada melhor que finalizar o almoço com uma sobremesa geladinha, cremosa e feita com muito sabor! 💖 Essa receita é perfeita para hoje: prática, deliciosa e com ingredientes simples que você provavelmente já tem em casa.
+    Confira o que você vai precisar para preparar essa tentação de chocolate trufado agora mesmo:
 
-    $imagemUrl = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/mandando_o_cliente_pra_finalizar_a_compra_oficial.png"; 
+🛒 Ingredientes:
+
+2 caixas de creme de leite (400g)
+
+1 lata de leite condensado
+
+1 xícara de leite (240ml)
+
+1/2 xícara de cacau em pó 50%
+
+100g de chocolate meio amargo derretido
+
+1 colher de sopa de essência de baunilha
+    ";
+
+    $imagemUrl = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/receitas_sorvete_de_chocolate_trufado.jpg"; 
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-image";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
