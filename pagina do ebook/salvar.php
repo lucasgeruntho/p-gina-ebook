@@ -76,33 +76,20 @@ if (isset($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['whatsapp
             $dataLembrete15min       = date('Y-m-d H:i:s', strtotime('+15 minutes', strtotime($dataCadastro)));
             $dataLembrete30min       = date('Y-m-d H:i:s', strtotime('+30 minutes', strtotime($dataCadastro)));
             $dataLembrete2000        = date('Y-m-d 20:00:00');
-            $dataLembrete1130        = date('Y-m-d 11:30:00', strtotime('+1 day'));
-            $dataLembrete1330        = date('Y-m-d 13:30:00', strtotime('+1 day'));
-            $dataLembrete1630        = date('Y-m-d 16:30:00', strtotime('+1 day'));
-            $dataLembrete2000Dia2    = date('Y-m-d 20:00:00', strtotime('+1 day'));
-            $dataLembrete2230        = date('Y-m-d 22:30:00', strtotime('+1 day'));
-            $dataLembreteDia3_1130   = date('Y-m-d 11:30:00', strtotime('+2 days'));
-            $dataLembreteDia3_1330   = date('Y-m-d 13:30:00', strtotime('+2 days'));
-            $dataLembreteDia3_1630   = date('Y-m-d 16:30:00', strtotime('+2 days'));
-            $dataLembreteDia3_2000   = date('Y-m-d 20:00:00', strtotime('+2 days'));
-            $dataLembreteDia3_2230   = date('Y-m-d 22:30:00', strtotime('+2 days'));
+   
 
             $stmtLembrete = $conexao->prepare("INSERT INTO lembretes_whatsapp 
                 (lead_id, nome, telefone, data_cadastro, 
                  lembrete_saudacao, lembrete_15min, lembrete_30min, 
-                 lembrete_2000, lembrete_1130, lembrete_1330, lembrete_1630, 
-                 lembrete_2000_dia2, lembrete_2230, 
-                 lembrete_dia3_1130, lembrete_dia3_1330, lembrete_dia3_1630, 
-                 lembrete_dia3_2000, lembrete_dia3_2230) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                 lembrete_2000
+                 ) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
             $stmtLembrete->bind_param(
-                "isssssssssssssssss",
+                "isssssss",
                 $idLead, $nome, $numeroComDDI, $dataCadastro,
                 $dataLembrete5min, $dataLembrete15min, $dataLembrete30min,
-                $dataLembrete2000, $dataLembrete1130, $dataLembrete1330,
-                $dataLembrete1630, $dataLembrete2000Dia2, $dataLembrete2230,
-                $dataLembreteDia3_1130, $dataLembreteDia3_1330, $dataLembreteDia3_1630,
-                $dataLembreteDia3_2000, $dataLembreteDia3_2230
+                $dataLembrete2000
+                
             );
             $stmtLembrete->execute();
             $stmtLembrete->close();
