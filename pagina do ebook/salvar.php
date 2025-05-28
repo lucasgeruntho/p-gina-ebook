@@ -39,60 +39,86 @@ if (isset($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['whatsapp
         if ($sql->execute()) {
             $idLead = $conexao->insert_id;
 
-            // Envio de e-mail
-            $mail = new PHPMailer(true);
-            try {
-                $mail->CharSet = 'UTF-8';
-                $mail->isSMTP();
-                $mail->Host = 'smtp.hostinger.com';
-                $mail->SMTPAuth = true;
-                $mail->Username = 'contato@receitasdechocolate.shop';
-                $mail->Password = 'Vitorebety1@';
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-                $mail->Port = 465;
-
-                $mail->setFrom('contato@receitasdechocolate.shop', 'Equipe Receitas de Chocolate');
-                $mail->addAddress($email, "$nome $sobrenome");
-
-                $mail->isHTML(true);
-                $mail->Subject = 'Bem-vindo(a) ao Receitas de Chocolate!';
-                $mail->Body = "
-                    <html>
-                    <body style='font-family: Arial, sans-serif; color: #333;'>
-                        <h2>Olá, $nome!</h2>
-                        <p>Obrigado por se cadastrar em nosso site.</p>
-                        <p>Um abraço da equipe <strong>100 Receitas de Chocolate</strong>!</p>
-                    </body>
-                    </html>
-                ";
-                $mail->AltBody = "Olá, $nome! Obrigado por se cadastrar.";
-                $mail->send();
-            } catch (Exception $e) {}
-
-            // Agendamento dos lembretes
+            // === WhatsApp formatado ===
             $numeroComDDI = '55' . preg_replace('/\D/', '', $whatsapp);
 
-            $dataLembrete5min        = date('Y-m-d H:i:s', strtotime('+5 minutes', strtotime($dataCadastro)));
-            $dataLembrete15min       = date('Y-m-d H:i:s', strtotime('+15 minutes', strtotime($dataCadastro)));
-            $dataLembrete30min       = date('Y-m-d H:i:s', strtotime('+30 minutes', strtotime($dataCadastro)));
-            $dataLembrete2000        = date('Y-m-d 20:00:00');
-   
+            // === Saudação (5 min) ===
+            $base5 = date('Y-m-d H:i:s', strtotime('+5 minutes', strtotime($dataCadastro)));
+            $verifica5 = $conexao->prepare("SELECT COUNT(*) as total FROM lembretes_whatsapp WHERE lembrete_saudacao = ?");
+            $verifica5->bind_param("s", $base5);
+            $verifica5->execute();
+            $qtde5 = $verifica5->get_result()->fetch_assoc()['total'] ?? 0;
+            $verifica5->close();
+            $dataLembrete5 = date('Y-m-d H:i:s', strtotime("+". ($qtde5 * 2) ." seconds", strtotime($base5)));
 
-            $stmtLembrete = $conexao->prepare("INSERT INTO lembretes_whatsapp 
-                (lead_id, nome, telefone, data_cadastro, 
-                 lembrete_saudacao, lembrete_15min, lembrete_30min, 
-                 lembrete_2000
-                 ) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmtLembrete->bind_param(
-                "isssssss",
+            // === 15 min ===
+            $base15 = date('Y-m-d H:i:s', strtotime('+15 minutes', strtotime($dataCadastro)));
+            $verifica15 = $conexao->prepare("SELECT COUNT(*) as total FROM lembretes_whatsapp WHERE lembrete_15min = ?");
+            $verifica15->bind_param("s", $base15);
+            $verifica15->execute();
+            $qtde15 = $verifica15->get_result()->fetch_assoc()['total'] ?? 0;
+            $verifica15->close();
+            $dataLembrete15 = date('Y-m-d H:i:s', strtotime("+". ($qtde15 * 2) ." seconds", strtotime($base15)));
+
+            // === 30 min ===
+            $base30 = date('Y-m-d H:i:s', strtotime('+30 minutes', strtotime($dataCadastro)));
+            $verifica30 = $conexao->prepare("SELECT COUNT(*) as total FROM lembretes_whatsapp WHERE lembrete_30min = ?");
+            $verifica30->bind_param("s", $base30);
+            $verifica30->execute();
+            $qtde30 = $verifica30->get_result()->fetch_assoc()['total'] ?? 0;
+            $verifica30->close();
+            $dataLembrete30 = date('Y-m-d H:i:s', strtotime("+". ($qtde30 * 2) ." seconds", strtotime($base30)));
+
+            // === 90 min ===
+            $base90 = date('Y-m-d H:i:s', strtotime('+90 minutes', strtotime($dataCadastro)));
+            $verifica90 = $conexao->prepare("SELECT COUNT(*) as total FROM lembretes_whatsapp WHERE lembrete_90min = ?");
+            $verifica90->bind_param("s", $base90);
+            $verifica90->execute();
+            $qtde90 = $verifica90->get_result()->fetch_assoc()['total'] ?? 0;
+            $verifica90->close();
+            $dataLembrete90 = date('Y-m-d H:i:s', strtotime("+". ($qtde90 * 2) ." seconds", strtotime($base90)));
+
+            // === 20:00 (hoje) ===
+            $base2000 = date('Y-m-d 20:00:00');
+            $verifica2000 = $conexao->prepare("SELECT COUNT(*) as total FROM lembretes_whatsapp WHERE lembrete_2000 = ?");
+            $verifica2000->bind_param("s", $base2000);
+            $verifica2000->execute();
+            $qtde2000 = $verifica2000->get_result()->fetch_assoc()['total'] ?? 0;
+            $verifica2000->close();
+            $dataLembrete2000 = date('Y-m-d H:i:s', strtotime("+". ($qtde2000 * 2) ." seconds", strtotime($base2000)));
+
+            // === 11:30 (dia seguinte) ===
+            $base1130 = date('Y-m-d 11:30:00', strtotime('+1 day'));
+            $verifica1130 = $conexao->prepare("SELECT COUNT(*) as total FROM lembretes_whatsapp WHERE lembrete_1130_dia2 = ?");
+            $verifica1130->bind_param("s", $base1130);
+            $verifica1130->execute();
+            $qtde1130 = $verifica1130->get_result()->fetch_assoc()['total'] ?? 0;
+            $verifica1130->close();
+            $dataLembrete1130 = date('Y-m-d H:i:s', strtotime("+". ($qtde1130 * 2) ." seconds", strtotime($base1130)));
+
+            // === 16:30 (hoje) ===
+            $base1630 = date('Y-m-d 16:30:00');
+            $verifica1630 = $conexao->prepare("SELECT COUNT(*) as total FROM lembretes_whatsapp WHERE lembrete_1630 = ?");
+            $verifica1630->bind_param("s", $base1630);
+            $verifica1630->execute();
+            $qtde1630 = $verifica1630->get_result()->fetch_assoc()['total'] ?? 0;
+            $verifica1630->close();
+            $dataLembrete1630 = date('Y-m-d H:i:s', strtotime("+". ($qtde1630 * 2) ." seconds", strtotime($base1630)));
+
+            // === Inserção ===
+            $stmt = $conexao->prepare("INSERT INTO lembretes_whatsapp 
+                (lead_id, nome, telefone, data_cadastro,
+                 lembrete_saudacao, lembrete_15min, lembrete_30min,
+                 lembrete_90min, lembrete_2000, lembrete_1130_dia2, lembrete_1630
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param(
+                "issssssssss",
                 $idLead, $nome, $numeroComDDI, $dataCadastro,
-                $dataLembrete5min, $dataLembrete15min, $dataLembrete30min,
-                $dataLembrete2000
-                
+                $dataLembrete5, $dataLembrete15, $dataLembrete30,
+                $dataLembrete90, $dataLembrete2000, $dataLembrete1130, $dataLembrete1630
             );
-            $stmtLembrete->execute();
-            $stmtLembrete->close();
+            $stmt->execute();
+            $stmt->close();
 
             echo "sucesso";
         } else {

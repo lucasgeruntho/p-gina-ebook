@@ -13,7 +13,7 @@ if ($conexao->connect_error) {
 
 $agora = date('Y-m-d H:i:s');
 
-$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_2000 <= ? AND enviado_2000 = 0";
+$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_1630 <= ? AND enviado_1630 = 0";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $agora);
 $stmt->execute();
@@ -23,7 +23,7 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "🍫 $nome, nossa promoção termina hoje! Aproveite agora para finalizar sua compra 👉 https://receitasdechocolate.shop";
+    $mensagem = "🕟 $nome, é hora de se deliciar! Suas receitas te esperam. Finalize sua compra agora: https://receitasdechocolate.shop";
     $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/mandando_o_cliente_pra_finalizar_a_compra_oficial.png";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-image";
@@ -46,12 +46,12 @@ while ($row = $result->fetch_assoc()) {
     curl_exec($ch);
     curl_close($ch);
 
-    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_2000 = 1 WHERE id = ?");
+    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_1630 = 1 WHERE id = ?");
     $update->bind_param("i", $row['id']);
     $update->execute();
     $update->close();
 
-    sleep(2); // espaçamento entre os envios
+    sleep(2);
 }
 
 $stmt->close();
