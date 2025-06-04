@@ -13,7 +13,7 @@ if ($conexao->connect_error) {
 
 $agora = date('Y-m-d H:i:s');
 
-$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_2000 <= ? AND enviado_2000 = 0";
+$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_2230_dia2 <= ? AND enviado_2230_dia2 = 0";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $agora);
 $stmt->execute();
@@ -23,28 +23,19 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "🍫Olá $nome! 
+    $mensagem = "🍫📚 Ebook “100 Receitas de Chocolate” com 20% OFF! 🍫📚
 
-🍫🌙 Para fechar a noite com chave de ouro: Pavê de Chocolate com Nutella! 😍
+Prepare-se para mergulhar em um mundo irresistível de sabor com as 100 receitas de chocolate. De sobremesas clássicas a inovações deliciosas, esse eBook é perfeito para adoçar seus dias!
 
-Sabe aquela sobremesa que conquista no primeiro olhar e no segundo já virou sua favorita? Esse pavê é exatamente assim: cremoso, marcante e com o sabor inconfundível da Nutella. Uma explosão de chocolate perfeita para adoçar sua noite!
+🎁 AGORA COM 20% DE DESCONTO!
 
-🛒 Ingredientes:
+✅ Sobremesas fáceis e irresistíveis
+✅ Fotos lindas e receitas testadas
+✅ Ideal para presentear ou se deliciar
 
-🍫 Para o Creme de Chocolate:
+🔗 Garanta já o seu Livro e transforme qualquer momento em uma ocasião especial!";
 
-1 lata de leite condensado
-
-1 caixa de creme de leite (200g)
-
-3 colheres de sopa de chocolate em pó 50% cacau
-
-1 colher de sopa de manteiga sem sal
-
-1 gema de ovo peneirada
-    
-💡 Prepare hoje à noite e sirva geladinho amanhã — ou não resista e se jogue nessa delícia ainda hoje mesmo! 🍽️❄️";
-    $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/receita_pavê_de_chocolate-hr-2000.jpg";
+    $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/promocao-20off.jpg";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-image";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
@@ -66,12 +57,12 @@ Sabe aquela sobremesa que conquista no primeiro olhar e no segundo já virou sua
     curl_exec($ch);
     curl_close($ch);
 
-    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_2000 = 1 WHERE id = ?");
+    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_2230_dia2 = 1 WHERE id = ?");
     $update->bind_param("i", $row['id']);
     $update->execute();
     $update->close();
 
-    sleep(2); // espaçamento entre os envios
+    sleep(2);
 }
 
 $stmt->close();

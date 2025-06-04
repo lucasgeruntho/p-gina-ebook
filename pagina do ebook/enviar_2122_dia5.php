@@ -13,7 +13,7 @@ if ($conexao->connect_error) {
 
 $agora = date('Y-m-d H:i:s');
 
-$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_30min <= ? AND enviado_30min = 0";
+$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_2122_dia5 <= ? AND enviado_2122_dia5 = 0";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $agora);
 $stmt->execute();
@@ -23,15 +23,18 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "⏳ $nome, ainda está em dúvida?💡
+    $mensagem = "🌙 Boa noite, $nome! 🚨 Está quase acabando! Últimas horas com desconto!
     
-    Se ficou alguma dúvida ou precisa de ajuda para concluir sua compra, estou aqui para te ajudar.
+Você está a um passo de garantir o eBook “100 Receitas de Chocolate” com 10% de desconto, mas a promoção termina HOJE! ⏳🍫
 
-    💡 Não deixe essa oportunidade passar! 🚀
+📘 Se já colocou no carrinho, não deixa pra depois!
+Finalize agora e garanta o desconto antes que ele desapareça!
+
+✅ Último dia para aproveitar
+📩 E se tiver qualquer dúvida, é só me chamar. Estou aqui pra te ajudar!
     
-    Não fique com desejo de Chocolate! 🍫
-    👉 https://pay.kiwify.com.br/ETvzGbe
-    ";
+👉 Garanta seu Ebook agora!
+https://pay.kiwify.com.br/ETvzGbe";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-text";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
@@ -52,12 +55,12 @@ while ($row = $result->fetch_assoc()) {
     curl_exec($ch);
     curl_close($ch);
 
-    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_30min = 1 WHERE id = ?");
+    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_2122_dia5 = 1 WHERE id = ?");
     $update->bind_param("i", $row['id']);
     $update->execute();
     $update->close();
 
-    sleep(2); // espaçamento entre os envios
+    sleep(2);
 }
 
 $stmt->close();

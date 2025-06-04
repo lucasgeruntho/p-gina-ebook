@@ -23,8 +23,35 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "📦 Olá $nome! Aqui está o lembrete que prometemos. Garanta agora suas receitas antes que acabe 👉 https://receitasdechocolate.shop";
-    $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/mandando_o_cliente_pra_finalizar_a_compra_oficial.png";
+    $mensagem = "Olá $nome!
+    
+🍫🌰 Sobremesa cremosa e irresistível: Sorvete de Chocolate com Creme de Avelã! 😍🍫
+
+Se você ama chocolate com aquele toque sofisticado de avelã, essa receita é perfeita! Super fácil de fazer.
+
+Confira os ingredientes e já separa tudo aí! 👇
+
+🛒 Ingredientes:
+
+🍦 Para o sorvete:
+
+2 xícaras (chá) de creme de leite fresco
+
+1 xícara (chá) de leite integral
+
+¾ xícara (chá) de açúcar
+
+1 colher (chá) de essência de baunilha
+
+🍫 Para a cobertura:
+
+½ xícara (chá) de creme de avelã (Nutella ou similar)
+
+2 colheres (sopa) de leite quente
+    
+✨ Fica uma delícia servido em taças com cobertura extra ou com raspinhas de chocolate por cima!✨";
+
+    $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/receita_sorvete_de_chocolate_com_creme_de_avela.jpg";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-image";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
@@ -51,7 +78,7 @@ while ($row = $result->fetch_assoc()) {
     $update->execute();
     $update->close();
 
-    sleep(2); // espaçamento entre os envios
+    sleep(2);
 }
 
 $stmt->close();

@@ -13,7 +13,7 @@ if ($conexao->connect_error) {
 
 $agora = date('Y-m-d H:i:s');
 
-$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_2000 <= ? AND enviado_2000 = 0";
+$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_0920_dia3 <= ? AND enviado_0920_dia3 = 0";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $agora);
 $stmt->execute();
@@ -23,28 +23,39 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "🍫Olá $nome! 
-
-🍫🌙 Para fechar a noite com chave de ouro: Pavê de Chocolate com Nutella! 😍
-
-Sabe aquela sobremesa que conquista no primeiro olhar e no segundo já virou sua favorita? Esse pavê é exatamente assim: cremoso, marcante e com o sabor inconfundível da Nutella. Uma explosão de chocolate perfeita para adoçar sua noite!
+    $mensagem = "☀️☕ Bom dia, $nome! que tal preparar um Mil-Folhas de Chocolate? 🥐✨
+    
+Um café da manhã assim transforma qualquer dia comum em um momento especial! ☕💛
 
 🛒 Ingredientes:
 
+🥐 Para a Massa Folhada:
+
+500g de massa folhada pronta (de boa qualidade)
+
+Farinha de trigo para polvilhar
+
 🍫 Para o Creme de Chocolate:
 
-1 lata de leite condensado
+500ml de leite integral
 
-1 caixa de creme de leite (200g)
+150g de açúcar
 
-3 colheres de sopa de chocolate em pó 50% cacau
+50g de amido de milho
 
-1 colher de sopa de manteiga sem sal
+4 gemas de ovo peneiradas
 
-1 gema de ovo peneirada
-    
-💡 Prepare hoje à noite e sirva geladinho amanhã — ou não resista e se jogue nessa delícia ainda hoje mesmo! 🍽️❄️";
-    $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/receita_pavê_de_chocolate-hr-2000.jpg";
+100g de chocolate meio amargo picado
+
+50g de manteiga sem sal
+
+✨ Para a Cobertura:
+
+200g de chocolate meio amargo picado
+
+50g de creme de leite fresco (opcional, para um brilho extra)";
+
+    $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/mil-folhas-de-chocolate.jpg";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-image";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
@@ -66,12 +77,12 @@ Sabe aquela sobremesa que conquista no primeiro olhar e no segundo já virou sua
     curl_exec($ch);
     curl_close($ch);
 
-    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_2000 = 1 WHERE id = ?");
+    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_0920_dia3 = 1 WHERE id = ?");
     $update->bind_param("i", $row['id']);
     $update->execute();
     $update->close();
 
-    sleep(2); // espaçamento entre os envios
+    sleep(2);
 }
 
 $stmt->close();

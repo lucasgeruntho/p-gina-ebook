@@ -13,7 +13,10 @@ if ($conexao->connect_error) {
 
 $agora = date('Y-m-d H:i:s');
 
-$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_2000 <= ? AND enviado_2000 = 0";
+// Busca todos os leads com lembrete agendado para 15:30 do dia seguinte e ainda não enviado
+$sql = "SELECT * FROM lembretes_whatsapp 
+        WHERE lembrete_1530_dia2 <= ? 
+        AND enviado_1530_dia2 = 0";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $agora);
 $stmt->execute();
@@ -23,28 +26,42 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "🍫Olá $nome! 
+    // Mensagem personalizada com imagem
+    $mensagem = "🍫 Olá $nome!
 
-🍫🌙 Para fechar a noite com chave de ouro: Pavê de Chocolate com Nutella! 😍
+🍪🍫 Vontade de um docinho caseiro? Então anota essa: Cookies de Chocolate Trufado! 🍪
 
-Sabe aquela sobremesa que conquista no primeiro olhar e no segundo já virou sua favorita? Esse pavê é exatamente assim: cremoso, marcante e com o sabor inconfundível da Nutella. Uma explosão de chocolate perfeita para adoçar sua noite!
+Crocantes por fora, macios por dentro e com um recheio trufado que derrete na boca... esses cookies são perfeitos para acompanhar um café, surpreender alguém ou simplesmente se mimar com algo delicioso!
 
 🛒 Ingredientes:
 
-🍫 Para o Creme de Chocolate:
+🥣 Para os Cookies:
 
-1 lata de leite condensado
+115g de manteiga sem sal (em temperatura ambiente)
 
-1 caixa de creme de leite (200g)
+100g de açúcar granulado
 
-3 colheres de sopa de chocolate em pó 50% cacau
+75g de açúcar mascavo claro
 
-1 colher de sopa de manteiga sem sal
+1 ovo grande
 
-1 gema de ovo peneirada
-    
-💡 Prepare hoje à noite e sirva geladinho amanhã — ou não resista e se jogue nessa delícia ainda hoje mesmo! 🍽️❄️";
-    $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/receita_pavê_de_chocolate-hr-2000.jpg";
+1 colher de chá de extrato de baunilha
+
+175g de farinha de trigo
+
+30g de cacau em pó sem açúcar
+
+1/2 colher de chá de bicarbonato de sódio
+
+1/4 colher de chá de sal
+
+🍫 Para o Recheio Trufado:
+
+100g de chocolate meio amargo picado
+
+50ml de creme de leite fresco (35% de gordura)";
+
+    $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/cookies_de_chocolate_trufado.jpg";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-image";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
@@ -66,12 +83,13 @@ Sabe aquela sobremesa que conquista no primeiro olhar e no segundo já virou sua
     curl_exec($ch);
     curl_close($ch);
 
-    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_2000 = 1 WHERE id = ?");
+    // Marcar como enviado
+    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_1530_dia2 = 1 WHERE id = ?");
     $update->bind_param("i", $row['id']);
     $update->execute();
     $update->close();
 
-    sleep(2); // espaçamento entre os envios
+    sleep(2); // Delay de envio para evitar sobrecarga
 }
 
 $stmt->close();

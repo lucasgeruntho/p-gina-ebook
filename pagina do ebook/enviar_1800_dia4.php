@@ -13,7 +13,7 @@ if ($conexao->connect_error) {
 
 $agora = date('Y-m-d H:i:s');
 
-$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_2000 <= ? AND enviado_2000 = 0";
+$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_1800_dia4 <= ? AND enviado_1800_dia4 = 0";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $agora);
 $stmt->execute();
@@ -23,28 +23,17 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "🍫Olá $nome! 
-
-🍫🌙 Para fechar a noite com chave de ouro: Pavê de Chocolate com Nutella! 😍
-
-Sabe aquela sobremesa que conquista no primeiro olhar e no segundo já virou sua favorita? Esse pavê é exatamente assim: cremoso, marcante e com o sabor inconfundível da Nutella. Uma explosão de chocolate perfeita para adoçar sua noite!
-
-🛒 Ingredientes:
-
-🍫 Para o Creme de Chocolate:
-
-1 lata de leite condensado
-
-1 caixa de creme de leite (200g)
-
-3 colheres de sopa de chocolate em pó 50% cacau
-
-1 colher de sopa de manteiga sem sal
-
-1 gema de ovo peneirada
+    $mensagem = "🍫 Ei $nome, ainda dá tempo de aproveitar! 😍 
     
-💡 Prepare hoje à noite e sirva geladinho amanhã — ou não resista e se jogue nessa delícia ainda hoje mesmo! 🍽️❄️";
-    $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/receita_pavê_de_chocolate-hr-2000.jpg";
+Nosso eBook “100 Receitas de Chocolate” continua com 10% OFF mas por pouco tempo!
+É a sua chance de ter receitas incríveis e fáceis sempre à mão, com aquele toque irresistível de chocolate 🍮🍩
+
+💬 Use o cupom CHOCOLATE10 na finalização.
+
+📲 Finalize agora: [https://receitasdechocolate.shop]";
+
+
+    $imagem = "https://receitasdechocolate.shop/fotos_ebook_capa_e_etc/mandando_o_cliente_pra_finalizar_a_compra.jpg";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-image";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
@@ -66,12 +55,12 @@ Sabe aquela sobremesa que conquista no primeiro olhar e no segundo já virou sua
     curl_exec($ch);
     curl_close($ch);
 
-    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_2000 = 1 WHERE id = ?");
+    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_1800_dia4 = 1 WHERE id = ?");
     $update->bind_param("i", $row['id']);
     $update->execute();
     $update->close();
 
-    sleep(2); // espaçamento entre os envios
+    sleep(2);
 }
 
 $stmt->close();

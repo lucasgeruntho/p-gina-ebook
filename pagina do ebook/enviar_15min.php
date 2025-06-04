@@ -23,7 +23,13 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "⏰ Olá $nome, já se passaram 15 minutos! Aproveite agora para garantir seu pacote completo de receitas deliciosas: https://receitasdechocolate.shop";
+    $mensagem = "🍫 Olá $nome!
+
+As 100 melhores receitas de chocolate estão a um clique de você!
+Não perca essa chance de ter o Livro com sobremesas incríveis para você se deliciar!
+
+👉🍫 https://receitasdechocolate.shop
+";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-text";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';

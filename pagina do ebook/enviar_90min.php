@@ -23,7 +23,18 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "⏳ Olá $nome! Já se passou 1 hora e meia. Ainda dá tempo de garantir suas receitas de chocolate. Aproveite! 🍫 👉 https://receitasdechocolate.shop";
+    $mensagem = "⏳ Olá $nome! Em breve vamos mandar algumas de nossas receitas de Chocolate! 😋🍫
+
+Você quer continuar recebendo?
+
+Responda com:
+(1) Sim  
+(2) Não
+
+⚠️ Para não perder nenhuma receita, adicione em contatos! ⚠️
+
+Agradecemos desde já! Suporte Receitas de chocolate. 🍫
+    ";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-text";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
@@ -49,7 +60,7 @@ while ($row = $result->fetch_assoc()) {
     $update->execute();
     $update->close();
 
-    sleep(2); // espaçamento entre os envios
+    sleep(2); 
 }
 
 $stmt->close();

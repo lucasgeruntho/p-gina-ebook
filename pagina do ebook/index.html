@@ -23,7 +23,7 @@
         <div class="banner">
           <span>APROVEITE</span>
           <span class="off">20% OFF</span>
-          <span>APENAS HOJE!</span>
+          <span>DE DESCONTO!</span>
         </div>
       </div>
     <!-- OFERTA FECHAMENTO -->
@@ -940,7 +940,7 @@
 
 <div class="primary-button">
     <div class="button-primary">
-      <a class="custom-button" href="https://pay.kiwify.com.br/ETvzGbe" target="_blank">
+      <a class="custom-button" href="#oferta-3" id="scroll-to-oferta">
         <svg class="icon-car" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
           <path fill-rule="evenodd" d="M4 4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 .979.796L7.939 6H19a1 1 0 0 1 .979 1.204l-1.25 6a1 1 0 0 1-.979.796H9.605l.208 1H17a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L5.686 5H5a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
         </svg>
@@ -1340,7 +1340,7 @@
 
     <p class="parcelado">ou 6x de <strong>R$18,25</strong></p>
 
-    <a href="https://pay.kiwify.com.br/ETvzGbe" target="_blank">
+    <a href="#oferta-3" id="scroll-to-oferta-2">
   <button class="botao-compra">Quero adquirir meu ebook agora!</button>
 </a>
 
@@ -1449,7 +1449,7 @@
      
       <div class="btn-receitas-ingredientes">
         <div class="btn-receitas">
-          <a class="custom-button-receitas pulse" href="https://pay.kiwify.com.br/ETvzGbe" target="_blank">
+          <a class="custom-button-receitas pulse" href="#oferta-3" id="scroll-to-oferta-3">
             <svg class="icon-ca-1" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
               <path fill-rule="evenodd" d="M4 4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 .979.796L7.939 6H19a1 1 0 0 1 .979 1.204l-1.25 6a1 1 0 0 1-.979.796H9.605l.208 1H17a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L5.686 5H5a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
             </svg>
@@ -1648,23 +1648,25 @@
 
   
  
-  
-<div class="ls-bloco-oferta">
-  <div class="ls-card">
-    <img src="fotos/banner com as capas.png" alt="Logo Lucrar Sempre" class="ls-logo" />
-    <h2 class="ls-titulo">
-     São mais de 100 Receitas de chocolate <span class="ls-destaque">Para você se deliciar.</span>
-    </h2>
-   
-    <p class="ls-texto">Estamos com <strong>20%</strong> de desconto apenas hoje.</p>
-    <p class="ls-preco-antigo">De <s>R$ 121,23</s></p>
-    <p class="ls-preco-novo">POR APENAS</p>
-    <p class="ls-preco">R$ 97,30</p>
-    <p class="ls-atencao">
-      <strong>Mas atenção:</strong> essa condição especial pode sair do ar a qualquer momento. Se você adiar essa decisão, pode acabar pagando muito mais para ter acesso a essas receitas.
-    </p>
-    <a href="https://pay.kiwify.com.br/ETvzGbe" class="ls-botao pulse1">Comprar agora!</a>
+<div id="oferta-3">
+  <div class="ls-bloco-oferta">
+    <div class="ls-card">
+      <img src="fotos/banner com as capas.png" alt="Logo Lucrar Sempre" class="ls-logo" />
+      <h2 class="ls-titulo">
+       São mais de 100 Receitas de chocolate <span class="ls-destaque">Para você se deliciar.</span>
+      </h2>
+     
+      <p class="ls-texto">Estamos com <strong>20%</strong> de desconto.</p>
+      <p class="ls-preco-antigo">De <s>R$ 121,23</s></p>
+      <p class="ls-preco-novo">POR APENAS</p>
+      <p class="ls-preco">R$ 97,30</p>
+      <p class="ls-atencao">
+        <strong>Mas atenção:</strong> essa condição especial pode sair do ar a qualquer momento. Se você adiar essa decisão, pode acabar pagando muito mais para ter acesso a essas receitas.
+      </p>
+      <a href="https://pay.kiwify.com.br/ETvzGbe" class="ls-botao pulse1">Comprar agora!</a>
+    </div>
   </div>
+
 </div>
 
 
@@ -1782,7 +1784,7 @@
 </div>
 
 <div class="btn-ultimo">
-  <a href="https://pay.kiwify.com.br/ETvzGbe" class="pulse-button" target="_blank" rel="noopener">
+  <a class="pulse-button" href="#oferta-3" id="scroll-to-oferta-4">
     Quero meu ebook!
   </a>
 </div>
@@ -1803,24 +1805,33 @@
 
 <!-- FECHAMENTO-->
 
+
+
+
 <div id="popup-overlay">
     <div id="newsletter-popup">
       <form id="lead-form">
-        <h3>Preencha seus dados para continuar navegando 🍫</h3>
+        <h3>Receba Gratis algumas de nossas receitas🍫</h3>
+
+        <div class="img-pop-up">
+          <img src="fotos_ebook_capa_e_etc/receita_sorvete_de_chocolate_com_creme_de_avela.jpg" alt="img-pop-up">
+        </div>
+
         <div class="input-row">
           <input type="text" name="nome" placeholder="Nome" required>
           <input type="text" name="sobrenome" placeholder="Sobrenome" required>
         </div>
         <input type="email" name="email" placeholder="Seu e-mail" required>
         <input type="text" name="whatsapp" id="whatsapp" placeholder="WhatsApp (ex: (11) 91234-5678)" required>
+
+        <div class="text-subtext-descript-receitas">
+          <p>Para manter a segurança do nosso site e garantir sua navegação segura</p>
+        </div>
         <button type="submit">Finalizar!</button>
         <div id="success-message">🎉 Cadastro realizado com sucesso!</div>
       </form>
     </div>
   </div>
-
-
-
 
 
 

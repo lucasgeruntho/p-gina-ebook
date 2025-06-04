@@ -12,11 +12,9 @@ html, body {
    
     padding: 0;
     height: 100vh;
-  
     display: inline-block;
-
-}
-
+    
+  }
 
 
 /* NOTEBOOK E COMPUTADOR */
@@ -1858,8 +1856,8 @@ p.copyright {
     padding: 0;
     box-sizing: border-box;
   }
-   
-
+  
+ 
 html, body {
     width: 100%;
     margin: 0;
@@ -1873,7 +1871,8 @@ html, body {
     display: flex;
     justify-content: center;
 }
-          
+      
+
 .banner {
     display: flex;
     align-items: center;
@@ -2142,7 +2141,6 @@ html, body {
     display: flex;
     align-items: center;
     gap: 8px;
-   
     background-color: #3b1a05;
     color: #f8e7d0;
     padding: 5px 10px;
@@ -2162,7 +2160,14 @@ html, body {
     width: 22px;
     height: 22px;
   }
-  
+
+
+
+
+
+
+
+
   .garantia-da-compra-primary {
     display: flex;
     margin-top: 3px;
@@ -3716,6 +3721,7 @@ p.copyright {
 
   #newsletter-popup h3 {
     margin-top: 0;
+    font-size: 15px;
     color: #6b2d2d;
   }
 
@@ -3760,4 +3766,19 @@ p.copyright {
     padding: 20px;
   }
 
+  .img-pop-up img {
+    width: 80%;
+    border-radius: 10px;
+  }
+
+  .text-subtext-descript-receitas {
+    width: 100%;
+    
+   
+  } .text-subtext-descript-receitas p {
+    font-size: 14px;
+    margin-bottom: 10px;
+   
+    font: bold;
+  }
    /* fechamento*/

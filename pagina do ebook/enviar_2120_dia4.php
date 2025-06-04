@@ -13,7 +13,7 @@ if ($conexao->connect_error) {
 
 $agora = date('Y-m-d H:i:s');
 
-$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_30min <= ? AND enviado_30min = 0";
+$sql = "SELECT * FROM lembretes_whatsapp WHERE lembrete_2120_dia4 <= ? AND enviado_2120_dia4 = 0";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $agora);
 $stmt->execute();
@@ -23,15 +23,16 @@ while ($row = $result->fetch_assoc()) {
     $numero = $row['telefone'];
     $nome = $row['nome'];
 
-    $mensagem = "⏳ $nome, ainda está em dúvida?💡
-    
-    Se ficou alguma dúvida ou precisa de ajuda para concluir sua compra, estou aqui para te ajudar.
+    $mensagem = "🌛 $nome, Boa Noite! 
 
-    💡 Não deixe essa oportunidade passar! 🚀
-    
-    Não fique com desejo de Chocolate! 🍫
-    👉 https://pay.kiwify.com.br/ETvzGbe
-    ";
+😴 Tá quase na hora de dormir… mas antes, um lembrete doce! 🍫
+
+O seu eBook '100 Receitas de Chocolate' ainda tá com 10% de desconto, mas essa oferta pode sair do forno a qualquer momento! ⏳🔥
+
+📌 Cupom: CHOCOLATE10
+📲 Link pra finalizar agora: [https://receitasdechocolate.shop]
+
+Não deixa pra amanhã… seu momento de adoçar a vida é agora! 🌟";
 
     $url = "https://api.z-api.io/instances/3E068112EFBD7038B6087AC1D8277FBB/token/7395858EE9E120B3607D4943/send-text";
     $clientToken = 'F7c6fe46c0fc44bd6a2fc3fc298b23a52S';
@@ -52,12 +53,12 @@ while ($row = $result->fetch_assoc()) {
     curl_exec($ch);
     curl_close($ch);
 
-    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_30min = 1 WHERE id = ?");
+    $update = $conexao->prepare("UPDATE lembretes_whatsapp SET enviado_2120_dia4 = 1 WHERE id = ?");
     $update->bind_param("i", $row['id']);
     $update->execute();
     $update->close();
 
-    sleep(2); // espaçamento entre os envios
+    sleep(2);
 }
 
 $stmt->close();
