@@ -2,13 +2,30 @@
 if (localStorage.getItem("leadCadastrado") === "sim") {
   document.getElementById("popup-overlay").style.display = "none";
   document.getElementById("conteudo-site").style.display = "block";
-  document.body.style.overflow = "auto";
+  document.body.style.overflow = "";
+  document.documentElement.style.overflow = "";
 } else {
-  // Mostra o pop-up depois de 15 segundos
   setTimeout(() => {
     document.getElementById("popup-overlay").style.display = "flex";
-  }, 15000);
+  }, 60000);
 }
+
+// Após o envio bem-sucedido do formulário
+setTimeout(() => {
+  document.getElementById("popup-overlay").style.display = "none";
+  document.getElementById("conteudo-site").style.display = "block";
+  document.body.style.overflow = "";
+  document.documentElement.style.overflow = "";
+}, 2000);
+
+// Evento de clique para fechar o pop-up manualmente
+document.getElementById("close-popup").addEventListener("click", function () {
+  document.getElementById("popup-overlay").style.display = "none";
+  document.getElementById("conteudo-site").style.display = "block";
+  document.body.style.overflow = "";
+  document.documentElement.style.overflow = "";
+});
+
 
 // Máscara automática para WhatsApp
 const inputWhats = document.getElementById("whatsapp");
@@ -60,6 +77,11 @@ document.getElementById("lead-form").addEventListener("submit", function (e) {
     });
 });
 
+document.getElementById("close-popup").addEventListener("click", function () {
+  document.getElementById("popup-overlay").style.display = "none";
+  document.getElementById("conteudo-site").style.display = "block";
+  document.body.style.overflow = "auto";
+});
 
 
   function toggleConteudo(el) {

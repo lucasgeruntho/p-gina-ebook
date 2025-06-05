@@ -10,6 +10,10 @@
 <body>
 
 
+
+
+
+
     <!-- OFERTA !-->
     <div class="oferta-background">
         <div class="oferta-container">
@@ -1805,30 +1809,26 @@
   </div>
 </div>
 
-  <div class="test-h1-color">
-    <h1>test</h1>
-  </div>
-  
+
 
 <!-- FECHAMENTO-->
 
 
-<div id="popup-overlay">
-    <div id="newsletter-popup">
-      <form id="lead-form">
-        <h3>Preencha seus dados para continuar navegando 🍫</h3>
-        <div class="input-row">
-          <input type="text" name="nome" placeholder="Nome" required>
-          <input type="text" name="sobrenome" placeholder="Sobrenome" required>
-        </div>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <input type="text" name="whatsapp" id="whatsapp" placeholder="WhatsApp (ex: (11) 91234-5678)" required>
-        <button type="submit">Finalizar!</button>
-        <div id="success-message">🎉 Cadastro realizado com sucesso!</div>
-      </form>
-    </div>
-  </div>
 
+<div id="popup-overlay" style="display: none;">
+  <div class="popup-container">
+    <button class="close-btn" id="close-popup">&times;</button>
+    <h2 class="popup-title">Receba algumas de nossas receitas Gratuitamente.</h2>
+    <img src="fotos_ebook_capa_e_etc/receita_sorvete_de_chocolate_com_creme_de_avela.jpg" alt="Imagem ilustrativa" class="popup-img" />
+    <form id="lead-form" class="popup-form">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="text" name="whatsapp" id="whatsapp" placeholder="Whatsapp (ddd) 91234-5678" required />
+      <p class="popup-footer-text">Para manter a segurança do nosso site e garantir sua navegação segura.</p>
+      <button type="submit">Finalizar!</button>
+    </form>
+    <div id="success-message" style="display: none;">realizado com sucesso!</div>
+  </div>
+</div>
 
 
 
