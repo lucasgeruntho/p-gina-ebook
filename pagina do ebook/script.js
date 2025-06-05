@@ -62,7 +62,6 @@ document.getElementById("lead-form").addEventListener("submit", function (e) {
 
 
 
-
   function toggleConteudo(el) {
     const card = el.closest('.receita-card');
     const conteudo = card.querySelector('.receita-conteudo');
@@ -81,43 +80,3 @@ document.getElementById("lead-form").addEventListener("submit", function (e) {
     conteudo.style.display = isOpen ? 'none' : 'block';
     card.classList.toggle('ativo', !isOpen);
   }
-
-
-
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollTargets = [
-      "scroll-to-oferta",
-      "scroll-to-oferta-2",
-      "scroll-to-oferta-3",
-      "scroll-to-oferta-4"
-    ];
-
-    const yOffset = -40; // ajuste conforme necessário
-
-    scrollTargets.forEach(id => {
-      const button = document.getElementById(id);
-      if (button) {
-        button.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.getElementById("oferta-3");
-          if (target) {
-            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({
-              top: y,
-              behavior: "smooth"
-            });
-          }
-        });
-      }
-    });
-  });
-
-
-
-
- 
-
-
-
-

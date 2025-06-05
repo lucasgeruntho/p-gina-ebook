@@ -3699,6 +3699,7 @@ p.copyright {
 
 
  /* pop-up da página */
+ /* pop-up da página */
 #popup-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -3721,7 +3722,6 @@ p.copyright {
 
   #newsletter-popup h3 {
     margin-top: 0;
-    font-size: 15px;
     color: #6b2d2d;
   }
 
@@ -3766,19 +3766,5 @@ p.copyright {
     padding: 20px;
   }
 
-  .img-pop-up img {
-    width: 80%;
-    border-radius: 10px;
-  }
-
-  .text-subtext-descript-receitas {
-    width: 100%;
-    
-   
-  } .text-subtext-descript-receitas p {
-    font-size: 14px;
-    margin-bottom: 10px;
-   
-    font: bold;
-  }
+   /* fechamento*/
    /* fechamento*/

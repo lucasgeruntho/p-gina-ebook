@@ -18,26 +18,27 @@ if ($conexao->connect_error) {
     die("Erro de conexão: " . $conexao->connect_error);
 }
 
-if (isset($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['whatsapp'])) {
+if (isset($_POST['nome'], $_POST['whatsapp'])) {
     $nome = trim($_POST['nome']);
-    $sobrenome = trim($_POST['sobrenome']);
-    $email = trim($_POST['email']);
     $whatsapp = trim($_POST['whatsapp']);
     $dataCadastro = date('Y-m-d H:i:s');
 
-    $verifica = $conexao->prepare("SELECT id FROM leads WHERE email = ?");
-    $verifica->bind_param("s", $email);
+    $verifica = $conexao->prepare("SELECT id FROM leads WHERE whatsapp = ?");
+    $verifica->bind_param("s", $whatsapp);
     $verifica->execute();
     $verifica->store_result();
 
     if ($verifica->num_rows > 0) {
         echo "ja_cadastrado";
     } else {
-        $sql = $conexao->prepare("INSERT INTO leads (nome, sobrenome, email, whatsapp, data_cadastro) VALUES (?, ?, ?, ?, ?)");
-        $sql->bind_param("sssss", $nome, $sobrenome, $email, $whatsapp, $dataCadastro);
+        $sql = $conexao->prepare("INSERT INTO leads (nome, whatsapp, data_cadastro) VALUES (?, ?, ?)");
+        $sql->bind_param("sss", $nome, $whatsapp, $dataCadastro);
 
         if ($sql->execute()) {
             $idLead = $conexao->insert_id;
+
+            // (continua normalmente com as variáveis de lembretes...)
+
 
             // === WhatsApp formatado ===
             $numeroComDDI = '55' . preg_replace('/\D/', '', $whatsapp);
