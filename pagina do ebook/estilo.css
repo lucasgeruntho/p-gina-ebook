@@ -3789,7 +3789,11 @@ p.copyright {
 }
 
 
-
+.popup-aberto {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%;
+}
 
 
    /* fechamento*/
