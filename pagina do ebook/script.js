@@ -7,8 +7,15 @@ if (localStorage.getItem("leadCadastrado") === "sim") {
   // Mostra o pop-up depois de 15 segundos
   setTimeout(() => {
     document.getElementById("popup-overlay").style.display = "flex";
-  }, 15000);
+    document.body.style.overflow = "hidden";
+  }, 60000);
 }
+
+// Botão de fechar o pop-up (X)
+document.getElementById("close-popup").addEventListener("click", function() {
+  document.getElementById("popup-overlay").style.display = "none";
+  document.body.style.overflow = "auto";
+});
 
 // Máscara automática para WhatsApp
 const inputWhats = document.getElementById("whatsapp");
@@ -59,6 +66,8 @@ document.getElementById("lead-form").addEventListener("submit", function (e) {
       console.error(err);
     });
 });
+
+
 
   function toggleConteudo(el) {
     const card = el.closest('.receita-card');

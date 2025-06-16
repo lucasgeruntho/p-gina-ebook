@@ -3699,101 +3699,131 @@ p.copyright {
     
      /* ocultar a img no desktop */
 
-
-#popup-overlay {
-  position: fixed;
+ /* Overlay */
+.popup-overlay {
+   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  display: flex;
-  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
   align-items: center;
+  justify-content: center;
   z-index: 9999;
-  overflow: auto;
 }
 
-.popup-container {
-  position: relative;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
+/* Conteúdo */
+.popup-content {
+   position: relative;
+ 
+  border-radius: 10px;
   width: 90%;
   max-width: 400px;
-  margin: 20px;
+  padding: 20px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background: #fff;
+  
+  overflow: visible; 
 }
 
-.close-btn {
+/* Botão X */
+.close-popup {
   position: absolute;
-  top: -15px;
-  right: -15px;
-  width: 35px;
-  height: 35px;
-  background: #5b1d1d;
-  color: white;
-  border: 2px solid white;
+  top: -10px;   
+  right: -10px; 
+  width: 37px;
+  height: 38px;
+  background: #fff; 
+  border: 3px solid #800000;
   border-radius: 50%;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1;
+  font-size: 24px;  
+  line-height: 1;    
+  color: #800000;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s, transform 0.2s;
 }
 
-.popup-title {
-  margin-bottom: 10px;
-  font-size: 20px;
-}
 
-.popup-img {
+
+/* Imagem */
+.popup-image {
   width: 100%;
-  max-width: 300px; /* limite em telas maiores */
-  height: 180px;     /* altura fixa */
-  object-fit: cover; /* mantém proporção e preenche o espaço */
-  border-radius: 8px;
-  margin: 0 auto 15px auto;
-  display: block;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
 }
 
+.popup-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+}
+/* Formulário */
 .popup-form input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 5px;
 }
 
-.popup-form button {
-  width: 100%;
-  padding: 12px;
-  background: #007bff;
+.popup-note {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.popup-button {
+  padding: 10px 20px;
+  background: #800000;
   color: white;
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
 
-.popup-footer-text {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 12px;
-  color: #555;
+.popup-button:hover {
+background-color: #3e1e00;
+  
 }
 
-
-.popup-aberto {
-  overflow: hidden !important;
-  position: fixed;
+/* Mensagem de Sucesso */
+.success-message {
   width: 100%;
+  display: none;
+  margin-top: 20px;
 }
 
+
+.success-message p {
+  font-size: 15px;
+  white-space: nowrap;
+  color: black;
+}
+
+.popup-content h2 {
+  color: #800000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
    /* fechamento*/
