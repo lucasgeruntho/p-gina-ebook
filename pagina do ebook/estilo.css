@@ -18,6 +18,159 @@ html, body {
 
 
 /* NOTEBOOK E COMPUTADOR */
+.background-vsl-pagina {
+  background-color: black;
+}
+
+
+  .middle-text {
+  width: 100%;
+  padding: 1.3rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.middle-text h2 {
+
+  font-size: 1rem ;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: aliceblue;
+  max-width: 1200px;
+  margin: 0;
+}
+
+.middle-text .subtext {
+  font-size: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  max-width: 1000px;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .middle-text h2 {
+    font-size: 3rem;
+  }
+
+  .middle-text .subtext {
+    font-size: 1.4rem;
+  }
+}
+
+
+.video-wrapper {
+  background-color: bla;
+  padding: 0 1.5rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  max-width: 900px; /* Limita largura no desktop */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-title {
+  background-color: rgb(183, 21, 21);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+@media (min-width: 768px) {
+  .video-title {
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0 0 12px 12px;
+}
+
+
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.cta-button {
+  background-color: rgb(183, 21, 21);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: darkred;
+}
+
+
+
+
+
+.video-description {
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: block;
+}
+
+.video-description p {
+  margin: 0;
+  font-size: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .video-description {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
 .oferta-background {
     background: linear-gradient(90deg, #8b0000, #b22222);
     height: 55px;
@@ -1873,6 +2026,163 @@ html, body {
 }
       
 
+
+
+.background-vsl-pagina-02 {
+  background-color: black;
+}
+
+
+  .middle-text {
+  width: 100%;
+  padding: 1.3rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.middle-text h2 {
+
+  font-size: 1rem ;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: aliceblue;
+  max-width: 1200px;
+  margin: 0;
+}
+
+.middle-text .subtext {
+  font-size: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  max-width: 1000px;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .middle-text h2 {
+    font-size: 3rem;
+  }
+
+  .middle-text .subtext {
+    font-size: 1.4rem;
+  }
+}
+
+
+.video-wrapper {
+  background-color: bla;
+  padding: 0 1.5rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  max-width: 900px; /* Limita largura no desktop */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-title {
+  background-color: rgb(183, 21, 21);
+  color: white;
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+@media (min-width: 768px) {
+  .video-title {
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0 0 12px 12px;
+}
+
+
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.cta-button {
+  background-color: rgb(183, 21, 21);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  width: 80%;
+ 
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: darkred;
+}
+
+
+
+
+
+.video-description {
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: block;
+}
+
+.video-description p {
+  margin: 0;
+  font-size: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .video-description {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+
+
 .banner {
     display: flex;
     align-items: center;
@@ -2209,7 +2519,7 @@ html, body {
     background-color: #2a1409;
     border: 1px solid #854c1c;
     border-radius: 4px;
-    padding: 6px 2px; 
+    padding: 10px 2px; 
     font-size: 16px;
     margin-bottom: 10px;
     color: rgb(151, 104, 68);
@@ -3691,7 +4001,7 @@ p.copyright {
 .banner,
 .chocolate-aliado-saude,
 .img-principal,
-.faq-wrapper {
+.faq-wrapper, .background-vsl-pagina-02{
   display: none;
 }
 

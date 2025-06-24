@@ -15,12 +15,10 @@ html, body {
   }
 
   .top-banner {
-     
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      
       box-sizing: border-box;
       background-color: rgb(183, 21, 21); /* cor escura pro contraste, pode mudar */
       text-align: center;
@@ -56,11 +54,12 @@ html, body {
 
 .middle-text h2 {
 
-  font-size: 1rem ;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: aliceblue;
-  max-width: 1200px;
-  margin: 0;
+ font-size: 1rem;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color: white;
+max-width: 1200px;
+margin: 0;
+
 }
 
 .middle-text .subtext {
@@ -85,6 +84,7 @@ html, body {
 
 
 .video-wrapper {
+  background-color: bla;
   padding: 0 1.5rem;
   margin-top: 2rem;
   box-sizing: border-box;
@@ -143,6 +143,8 @@ html, body {
   color: white;
   font-size: 1rem;
   font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
   padding: 1rem 2rem;
   border: none;
   border-radius: 8px;
@@ -183,3 +185,30 @@ html, body {
     font-size: 1.3rem;
   }
 }
+.text-final-video{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+.text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw; /* Espaço apenas nas laterais */
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .centered-text {
+    margin: 0;               /* Remove qualquer margem padrão */
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Responsivo: cresce conforme tela */
+  }
